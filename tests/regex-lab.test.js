@@ -28,8 +28,8 @@ test('empty matches do not loop for ever', () => {
   const r = fn.runRegex('x*', 'g', 'abc');
   assert.strictEqual(r.matches.length, 4);
   assert.ok(r.matches.every((m) => m.text === ''));
-  assert.strictEqual(fn.runRegex('', 'gu', '😀😀').matches.length, 0); // an empty pattern means nothing to show
-  assert.strictEqual(fn.runRegex('(?:)', 'gu', '😀😀').matches.length, 3);
+  assert.strictEqual(fn.runRegex('', 'gu', '\u{1F600}\u{1F600}').matches.length, 0); // an empty pattern means nothing to show
+  assert.strictEqual(fn.runRegex('(?:)', 'gu', '\u{1F600}\u{1F600}').matches.length, 3);
 });
 
 test('stops at the most it shows', () => {
