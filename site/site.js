@@ -1,26 +1,11 @@
-// The website's shared bits: the dark / light switch, Aether's icons, and reading the Marketplace's index.json.
+// The website's shared bits: Aether's icons, and reading the Marketplace's index.json.
 (function (root) {
   'use strict';
 
   const REPO = 'https://github.com/Redfire3248/aether-marketplace';
 
-  // ---- dark / light (dark unless the visitor picked light; the <head> sets it early so nothing flashes)
-  const store = {
-    get() { try { return localStorage.getItem('aether-theme'); } catch { return null; } },
-    set(v) { try { localStorage.setItem('aether-theme', v); } catch { /* not kept, that is fine */ } }
-  };
-  function setTheme(t) {
-    document.documentElement.dataset.theme = t;
-    for (const b of document.querySelectorAll('.theme-btn')) {
-      b.setAttribute('aria-label', t === 'light' ? 'Switch to the dark theme' : 'Switch to the light theme');
-      b.title = b.getAttribute('aria-label');
-    }
-  }
+  // the colour themes are in themes.js
   document.addEventListener('DOMContentLoaded', () => {
-    setTheme(document.documentElement.dataset.theme || 'dark');
-    for (const b of document.querySelectorAll('.theme-btn')) {
-      b.addEventListener('click', () => { const t = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'; store.set(t); setTheme(t); });
-    }
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
   });

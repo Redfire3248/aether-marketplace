@@ -65,7 +65,7 @@ They install in a moment, start at once, and update with one click when a new ve
 
 ## The website
 
-[redfire3248.github.io/aether-marketplace](https://redfire3248.github.io/aether-marketplace/) is the home page for Aether and this Marketplace. It is in `site/`: plain HTML, CSS and a little JavaScript, with no build step. Every push to `main` publishes it (`.github/workflows/pages.yml`), with `index.json` and the `extensions/` folders next to it.
+[redfire3248.github.io/aether-marketplace](https://redfire3248.github.io/aether-marketplace/) is this Marketplace; Aether's own page is [redfire3248.github.io/aether-download](https://redfire3248.github.io/aether-download/). Both have the same five themes (`site/themes.js`), and a theme picked on one is on when the other opens. Each theme's page shows Aether in that theme. It is in `site/`: plain HTML, CSS and a little JavaScript, with no build step. Every push to `main` publishes it (`.github/workflows/pages.yml`), with `index.json` and the `extensions/` folders next to it.
 
 To look at it on your own computer, serve the repository's folder and open `site/`:
 
@@ -73,7 +73,7 @@ To look at it on your own computer, serve the repository's folder and open `site
 python -m http.server 8000
 ```
 
-Then go to http://localhost:8000/site/.
+Then go to http://localhost:8000/site/marketplace.html.
 
 ## License
 

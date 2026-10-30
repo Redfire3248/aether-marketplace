@@ -1,4 +1,5 @@
-/* The Aether website: dark by default, light with the button at the top. */
+/* The Aether Marketplace website. Its colours come from themes.js: the same five themes as Aether's download page. */
+@font-face { font-family: 'Pixelify'; src: url(fonts/pixelify-sans-latin-600-normal.woff2) format('woff2'); font-weight: 600; font-display: swap; }
 :root {
   --bg: #0c0e16;
   --panel: #131724;
@@ -72,21 +73,19 @@ code, pre, kbd { font-family: var(--mono); font-size: 0.9em; }
 /* ---- the bar at the top */
 .top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
 .top .wrap { display: flex; align-items: center; gap: 12px; height: 60px; }
-.brand { display: flex; align-items: center; gap: 9px; color: var(--text); font-weight: 700; font-size: 18px; }
+.brand { display: flex; align-items: center; gap: 9px; color: var(--text); font: 600 21px 'Pixelify', var(--sans); }
 .brand:hover { text-decoration: none; }
 .brand svg { width: 28px; height: 28px; }
 .nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .nav a { color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: 15px; white-space: nowrap; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--text); background: var(--hover); text-decoration: none; }
-.theme-btn { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--text); cursor: pointer; }
-.theme-btn:hover { background: var(--hover); }
-.theme-btn .sun { display: none; }
-:root[data-theme="light"] .theme-btn .sun { display: block; }
-:root[data-theme="light"] .theme-btn .moon { display: none; }
 @media (max-width: 640px) {
   .nav .hide-small { display: none; }
   .nav a { padding: 6px 8px; }
   .top .wrap { gap: 8px; }
+}
+@media (max-width: 440px) {
+  .brand span { display: none; } /* the logo alone, so the links fit */
 }
 @media (max-width: 380px) {
   .nav { gap: 0; }
@@ -94,51 +93,9 @@ code, pre, kbd { font-family: var(--mono); font-size: 0.9em; }
   .brand { font-size: 16px; }
 }
 
-/* ---- buttons */
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 11px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font: 600 15px/1 var(--sans); cursor: pointer; }
-.btn:hover { background: var(--hover); text-decoration: none; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-.btn.primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--text)); }
-.btn .icon { width: 18px; height: 18px; }
-
-/* ---- home: the top part */
-.hero { padding: 64px 0 40px; background: radial-gradient(ellipse 70% 60% at 50% 0%, var(--glow), transparent 70%); }
-.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
-.hero h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; letter-spacing: -0.02em; }
-.hero h1 span { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.hero p.lead { font-size: 19px; color: var(--muted); margin: 0 0 26px; max-width: 34em; }
-.actions { display: flex; flex-wrap: wrap; gap: 10px; }
-@media (max-width: 860px) {
-  .hero { padding-top: 40px; }
-  .hero .wrap { grid-template-columns: 1fr; }
-}
-
-/* a little editor window, drawn in HTML */
-.window { background: var(--code-bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; min-width: 0; }
-.window .bar { display: flex; align-items: center; gap: 6px; padding: 10px 12px; background: var(--panel); border-bottom: 1px solid var(--border); }
-.window .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
-.window .tab { margin-left: 10px; font: 13px var(--mono); color: var(--muted); }
-.window pre { margin: 0; padding: 16px; font-size: 13.5px; line-height: 1.65; overflow-x: auto; color: var(--text); }
-.k { color: var(--c-key); } .s { color: var(--c-str); } .n { color: var(--c-num); } .c { color: var(--c-com); font-style: italic; } .f { color: var(--c-fn); }
-
-/* ---- sections */
-section { padding: 56px 0; }
-section h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 8px; letter-spacing: -0.01em; }
-section .intro { color: var(--muted); margin: 0 0 28px; max-width: 42em; }
+/* ---- cards */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
 .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; min-width: 0; }
-.feature .badge { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); margin-bottom: 14px; }
-.feature:nth-child(3n+2) .badge { background: color-mix(in srgb, var(--accent2) 16%, transparent); color: var(--accent2); }
-.feature h3 { margin: 0 0 6px; font-size: 18px; }
-.feature p { margin: 0; color: var(--muted); font-size: 15px; }
-
-/* get Aether */
-.get { background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.steps { list-style: none; padding: 0; margin: 0 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: step; }
-.steps li { counter-increment: step; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 18px 18px 60px; position: relative; }
-.steps li::before { content: counter(step); position: absolute; left: 18px; top: 16px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-text); font-weight: 700; font-size: 14px; }
-.steps b { display: block; margin-bottom: 2px; }
-.cmd { display: block; background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; margin: 6px 0; overflow-x: auto; white-space: pre; }
 
 footer { padding: 30px 0 40px; color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
@@ -262,3 +219,84 @@ footer nav { display: flex; flex-wrap: wrap; gap: 16px; margin-left: auto; }
 #list .card.ext:not(.theme-card):hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 16px 36px -20px var(--accent); }
 @keyframes card-in { from { opacity: 0; transform: translateY(18px) scale(.98); } }
 @media (prefers-reduced-motion: reduce) { #list .card { animation: none; } .cat-pill, .theme-card, .theme-card::after { transition: none; } }
+
+/* ---- the theme menu, as on the download page */
+.theme-pick { position: relative; flex: none; }
+.theme-btn { display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 11px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font: 600 15px var(--sans); cursor: pointer; transition: border-color .2s; }
+.theme-btn:hover { border-color: var(--accent); }
+.theme-btn svg { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
+.theme-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+.theme-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--text) 18%, transparent); }
+.theme-menu { position: absolute; right: 0; top: calc(100% + 12px); width: 440px; max-width: calc(100vw - 32px); padding: 8px 12px 12px; border-radius: 16px; border: 1px solid var(--border); background: var(--panel); box-shadow: 0 30px 70px -24px #000; z-index: 20; }
+.theme-menu[hidden] { display: none; }
+.tm-h { margin: 8px 4px 6px; font: 600 15px 'Pixelify', var(--sans); color: var(--accent2); letter-spacing: .04em; }
+.tm-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+.tm-row { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 6px 8px; border: 1px solid transparent; border-radius: 10px; background: none; color: var(--text); font: 600 14.5px var(--sans); text-align: left; cursor: pointer; transition: background .15s, border-color .15s; }
+.tm-row.px { font-family: 'Jersey 15', 'Pixelify', monospace; font-size: 18px; font-weight: 400; letter-spacing: .03em; }
+.tm-row:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.tm-row[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.tm-sw { flex: none; display: flex; align-items: flex-end; gap: 2px; width: 34px; height: 26px; padding: 3px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--text) 22%, transparent); }
+.tm-sw i { flex: 1; height: 100%; border-radius: 2px; } .tm-sw i:nth-child(2) { height: 72%; } .tm-sw i:nth-child(3) { height: 46%; }
+.tm-row.px .tm-sw, .tm-row.px .tm-sw i { border-radius: 0; }
+@media (max-width: 640px) {
+  .theme-btn span { display: none; }
+  .brand { flex: none; }
+  .tm-list { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---- the pixel themes: the whole site turns pixel, as Aether does */
+:root[data-style="pixel"] { --sans: 'Jersey 15', 'VT323', monospace; --mono: 'Departure Mono', ui-monospace, monospace; }
+[data-style="pixel"] *, [data-style="pixel"] *::before, [data-style="pixel"] *::after { border-radius: 0 !important; font-synthesis: none; }
+[data-style="pixel"] body { font-size: 20px; letter-spacing: .03em; -webkit-font-smoothing: none; }
+[data-style="pixel"] body::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: repeating-conic-gradient(color-mix(in srgb, var(--accent) 6%, transparent) 0 25%, transparent 0 50%) 0 0 / 8px 8px; }
+[data-style="pixel"] body::after { content: ''; position: fixed; inset: 0; z-index: 300; pointer-events: none; background: repeating-linear-gradient(0deg, #0000 0 2px, #00000014 2px 3px); }
+[data-style="pixel"] .brand { font: 400 26px 'Jersey 15', monospace; }
+[data-style="pixel"] .brand img { content: url(logo-pixel.png); }
+[data-style="pixel"] :is(h1, h2, h3) { font-weight: 400; letter-spacing: 0; line-height: 1.05; text-shadow: 3px 3px 0 #000; }
+[data-style="pixel"][data-theme="light"] :is(h1, h2, h3) { text-shadow: none; }
+[data-style="pixel"] .page-head h1, [data-style="pixel"] .ext-head h1 { font-size: clamp(40px, 7vw, 60px); }
+[data-style="pixel"] :is(.nav a, .theme-btn, .cat, .tm-row) { font-size: 20px; font-weight: 400; }
+[data-style="pixel"] .tm-h { font: 400 18px 'Jersey 15', monospace; }
+[data-style="pixel"] .search input { font: 20px var(--sans); }
+[data-style="pixel"] :is(.small, .ext .by, .tag, .meta, .cat .count, .chip .count, kbd, footer) { font-family: 'Departure Mono', monospace; font-size: 12px; letter-spacing: 0; }
+[data-style="pixel"] .ext h3 { font-size: 23px; }
+[data-style="pixel"] .ext p, [data-style="pixel"] .notice { font-size: 19px; line-height: 1.25; }
+[data-style="pixel"] .top { background: var(--panel); backdrop-filter: none; border-bottom: 3px solid var(--border); }
+[data-style="pixel"] :is(.card, .search, .cats, .notice, .theme-menu) { border: 3px solid var(--border); box-shadow: 4px 4px 0 #000; }
+[data-style="pixel"] .notice { border-left-color: var(--accent); }
+[data-style="pixel"] :is(.theme-btn, .tag, .badge) { border: 2px solid var(--border); box-shadow: 2px 2px 0 #000; }
+[data-style="pixel"] .cat-pill { box-shadow: 2px 2px 0 #000; transition-timing-function: steps(6, end); }
+[data-style="pixel"] .tm-row[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); border-color: #000; box-shadow: 2px 2px 0 #000; }
+[data-style="pixel"] .tm-sw { border: 2px solid #000; }
+[data-style="pixel"] #list .card.ext:not(.theme-card):hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #000; }
+[data-style="pixel"] svg { shape-rendering: crispEdges; }
+
+/* ---- a theme's picture on its page: Aether's window in the theme's colours */
+.preview { margin: 0 0 22px; padding: 0; border: 0; }
+.pv-win { overflow: hidden; border-radius: 12px; border: 1px solid var(--t-border); background: var(--t-bg); color: var(--t-text); box-shadow: 0 30px 60px -30px #000; font: 13px/1.4 var(--sans); }
+.pv-title { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; background: var(--t-bg); border-bottom: 1px solid var(--t-border); }
+.pv-title b { font-size: 13px; }
+.pv-search { flex: 0 1 300px; margin: 0 auto; padding: 3px 10px; border-radius: 7px; border: 1px solid var(--t-border); background: var(--t-panel); color: var(--t-muted); font-size: 12px; white-space: nowrap; overflow: hidden; }
+.pv-title i { width: 10px; height: 10px; border-radius: 50%; background: var(--t-border); } .pv-title i:last-child { background: var(--t-accent); }
+.pv-body { display: grid; grid-template-columns: 44px 170px minmax(0, 1fr); min-height: 230px; }
+.pv-act { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 12px 0; background: var(--t-panel); border-right: 1px solid var(--t-border); }
+.pv-act i { width: 18px; height: 18px; border-radius: 5px; border: 2px solid var(--t-muted); opacity: .7; } .pv-act i.on { border-color: var(--t-accent); background: color-mix(in srgb, var(--t-accent) 30%, transparent); opacity: 1; }
+.pv-side { display: flex; flex-direction: column; gap: 2px; padding: 10px 8px; background: var(--t-panel); border-right: 1px solid var(--t-border); color: var(--t-muted); }
+.pv-side b { margin: 0 4px 6px; color: var(--t-text); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.pv-side span { padding: 3px 6px; border-radius: 6px; } .pv-side span.on { background: color-mix(in srgb, var(--t-accent) 22%, transparent); color: var(--t-text); }
+.pv-main { display: flex; flex-direction: column; min-width: 0; background: var(--t-editor); }
+.pv-tabs { display: flex; background: var(--t-panel); border-bottom: 1px solid var(--t-border); }
+.pv-tabs span { padding: 7px 14px; color: var(--t-muted); border-right: 1px solid var(--t-border); } .pv-tabs span.on { background: var(--t-editor); color: var(--t-text); box-shadow: inset 0 2px 0 var(--t-accent); }
+.pv-code { margin: 0; padding: 12px 14px; background: none; border: 0; color: var(--t-text); font: 13.5px/1.7 var(--mono); white-space: pre; overflow: hidden; }
+.pv-code .ln { display: inline-block; width: 2.2em; color: var(--t-muted); opacity: .6; user-select: none; }
+.pv-code .k { color: var(--t-keyword); } .pv-code .s { color: var(--t-string); } .pv-code .f { color: var(--t-fn); } .pv-code .n { color: var(--t-number); } .pv-code .c { color: var(--t-comment); font-style: italic; }
+.pv-status { display: flex; gap: 16px; padding: 4px 12px; background: var(--t-accent); color: var(--t-accentText); font-size: 12px; font-weight: 600; } .pv-status span:last-child { margin-left: auto; }
+.preview figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
+@media (max-width: 640px) { .pv-body { grid-template-columns: 36px minmax(0, 1fr); } .pv-side { display: none; } .pv-search { display: none; } }
+/* a pixel theme's picture is pixel too, as the theme makes Aether */
+.preview.pixel .pv-win { border: 3px solid var(--t-border); border-radius: 0; box-shadow: 5px 5px 0 #000; font-family: 'Jersey 15', monospace; font-size: 17px; letter-spacing: .03em; -webkit-font-smoothing: none; }
+.preview.pixel .pv-win * { border-radius: 0; }
+.preview.pixel .pv-code { font: 13px/1.75 'Departure Mono', monospace; }
+.preview.pixel .pv-code .c { font-style: normal; }
+.preview.pixel :is(.pv-title b, .pv-search, .pv-side b, .pv-status) { font-size: 16px; font-weight: 400; letter-spacing: .03em; text-transform: none; }
+.preview.pixel .pv-title img { image-rendering: auto; }
