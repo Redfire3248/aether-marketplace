@@ -1,0 +1,27 @@
+/* Regex Lab's tab */
+.rxl { max-width: 900px; margin: 0 auto; padding: 18px 20px 40px; display: flex; flex-direction: column; gap: 8px; color: var(--text); }
+.rxl code, .rxl pre, .rxl input, .rxl textarea { font-family: var(--mono, ui-monospace, Consolas, monospace); font-size: 13px; }
+.rxl-field { display: flex; align-items: center; gap: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 4px 10px; }
+.rxl-field:focus-within { border-color: var(--accent); }
+.rxl-slash { color: var(--muted); font-family: var(--mono, ui-monospace, Consolas, monospace); white-space: nowrap; }
+.rxl-flagtext { color: var(--accent); }
+.rxl-pattern, .rxl-replace { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text); padding: 6px 0; }
+.rxl-replace { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+.rxl-replace:focus, .rxl-text:focus { border-color: var(--accent); outline: 0; }
+.rxl-pattern.rxl-bad { color: var(--danger); }
+.rxl-flags { display: flex; flex-wrap: wrap; gap: 6px; }
+.rxl-flag b { color: var(--accent); margin-right: 2px; }
+.rxl-flag.rxl-on { background: color-mix(in srgb, var(--accent) 22%, transparent); border-color: var(--accent); color: var(--text); }
+.rxl-error { color: var(--danger); font-size: 12px; }
+.rxl-label { margin-top: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.rxl-text { min-height: 110px; resize: vertical; background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+.rxl-out, .rxl-replaced { margin: 0; padding: 10px; white-space: pre-wrap; word-break: break-word; background: var(--editor, var(--panel)); border: 1px solid var(--border); border-radius: 8px; max-height: 320px; overflow: auto; }
+.rxl-hit { background: color-mix(in srgb, var(--accent) 35%, transparent); color: inherit; border-radius: 3px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 70%, transparent); }
+.rxl-hit.rxl-alt { background: color-mix(in srgb, var(--accent2, var(--accent)) 35%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent2, var(--accent)) 70%, transparent); }
+.rxl-empty { display: inline-block; width: 2px; height: 1.1em; vertical-align: text-bottom; background: var(--accent); }
+.rxl-list { display: flex; flex-direction: column; gap: 6px; }
+.rxl-match { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+.rxl-head b { color: var(--accent); }
+.rxl-group { padding-left: 16px; font-size: 12px; }
+.rxl-gname { display: inline-block; min-width: 3em; color: var(--muted); }
+.rxl-actions { display: flex; gap: 6px; margin-top: 6px; }

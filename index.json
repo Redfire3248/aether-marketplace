@@ -42,6 +42,85 @@
       "size": 5239
     },
     {
+      "id": "git-line",
+      "name": "Git Line",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "The status bar shows who last changed the cursor's line and when. Click it for the commit's message.",
+      "icon": "git",
+      "tags": [
+        "git",
+        "history"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 6977
+    },
+    {
+      "id": "html-quick",
+      "name": "HTML Quick",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Type a short abbreviation like ul>li*3 or div.card>h2+p and press Ctrl+Alt+E to turn it into HTML.",
+      "icon": "code",
+      "tags": [
+        "html",
+        "web",
+        "snippets"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 12905
+    },
+    {
+      "id": "json-tools",
+      "name": "JSON Tools",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Format, minify or sort the keys of JSON (the selection or the whole file), and see where the error is when it is not valid.",
+      "icon": "braces",
+      "tags": [
+        "json",
+        "formatting",
+        "data"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 9811
+    },
+    {
+      "id": "markdown-tables",
+      "name": "Markdown Tables",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Line up the columns of the table the cursor is in, add a row or a column, and turn comma- or tab-separated text into a table.",
+      "icon": "grid",
+      "tags": [
+        "markdown",
+        "writing",
+        "editing"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 10026
+    },
+    {
       "id": "pet-pack",
       "name": "Pet Pack",
       "version": "1.0.0",
@@ -80,6 +159,27 @@
       "size": 3833
     },
     {
+      "id": "regex-lab",
+      "name": "Regex Lab",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "A tab of its own to try a regular expression on some text: matches highlighted, groups listed, and a replace preview.",
+      "icon": "search",
+      "tags": [
+        "regex",
+        "text",
+        "tools"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js",
+        "style.css"
+      ],
+      "size": 12360
+    },
+    {
       "id": "text-tools",
       "name": "Text Tools",
       "version": "1.0.0",
@@ -97,6 +197,25 @@
         "main.js"
       ],
       "size": 4843
+    },
+    {
+      "id": "theme-pack",
+      "name": "Theme Pack",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Five colour themes: Deep Sea, Ember and Forest Night (dark), Paper and Glacier (light), easy to read all day.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "colours"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 4563
     },
     {
       "id": "word-count",

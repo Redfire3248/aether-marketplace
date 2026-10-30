@@ -1,0 +1,14 @@
+{
+  "id": "git-line",
+  "name": "Git Line",
+  "version": "1.0.0",
+  "description": "The status bar shows who last changed the cursor's line and when. Click it for the commit's message.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "git",
+  "tags": [
+    "git",
+    "history"
+  ],
+  "aether": ">=1.9.22"
+}

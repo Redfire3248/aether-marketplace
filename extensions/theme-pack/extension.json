@@ -1,0 +1,14 @@
+{
+  "id": "theme-pack",
+  "name": "Theme Pack",
+  "version": "1.0.0",
+  "description": "Five colour themes: Deep Sea, Ember and Forest Night (dark), Paper and Glacier (light), easy to read all day.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "colours"
+  ],
+  "aether": ">=1.9.22"
+}

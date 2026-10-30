@@ -1,0 +1,10 @@
+{
+  "name": "aether-marketplace",
+  "private": true,
+  "description": "Extensions for Aether, and the Aether website.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/",
+    "check": "node tools/build-index.js --check"
+  }
+}
