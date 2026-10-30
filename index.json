@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "extensions": [
+    {
+      "id": "colour-swatches",
+      "name": "Colour Swatches",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "A small square of the colour before every colour in your code: #hex, rgb() and hsl(), in CSS, HTML, JS, JSON and more.",
+      "icon": "palette",
+      "tags": [
+        "css",
+        "colours",
+        "web"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js",
+        "style.css"
+      ],
+      "size": 3722
+    },
+    {
+      "id": "focus-timer",
+      "name": "Focus Timer",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Focus in blocks with breaks between, from the status bar. It chimes at the end and counts your blocks for the day.",
+      "icon": "clock",
+      "tags": [
+        "productivity",
+        "timer"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 5239
+    },
+    {
+      "id": "pet-pack",
+      "name": "Pet Pack",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Three more pets for Aether: a frog, a penguin and a bunny, each with three skins.",
+      "icon": "paw",
+      "tags": [
+        "pets",
+        "fun"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 4934
+    },
+    {
+      "id": "quick-insert",
+      "name": "Quick Insert",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Put placeholder text, today's date, the time, a unique id, a strong password or a random number at the cursor.",
+      "icon": "plus",
+      "tags": [
+        "text",
+        "productivity"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 3833
+    },
+    {
+      "id": "text-tools",
+      "name": "Text Tools",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Change case (camelCase, snake_case, Title Case and more), and sort, clean up, number or join lines.",
+      "icon": "type",
+      "tags": [
+        "text",
+        "editing"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 4843
+    },
+    {
+      "id": "word-count",
+      "name": "Word Count",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Words and reading time in the status bar for Markdown and text files, and for whatever you select.",
+      "icon": "book",
+      "tags": [
+        "writing",
+        "markdown"
+      ],
+      "aether": ">=1.9.22",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 2955
+    }
+  ]
+}

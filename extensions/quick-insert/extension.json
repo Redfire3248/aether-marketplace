@@ -1,0 +1,14 @@
+{
+  "id": "quick-insert",
+  "name": "Quick Insert",
+  "version": "1.0.0",
+  "description": "Put placeholder text, today's date, the time, a unique id, a strong password or a random number at the cursor.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "plus",
+  "tags": [
+    "text",
+    "productivity"
+  ],
+  "aether": ">=1.9.22"
+}

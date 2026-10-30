@@ -1,0 +1,14 @@
+{
+  "id": "text-tools",
+  "name": "Text Tools",
+  "version": "1.0.0",
+  "description": "Change case (camelCase, snake_case, Title Case and more), and sort, clean up, number or join lines.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "type",
+  "tags": [
+    "text",
+    "editing"
+  ],
+  "aether": ">=1.9.22"
+}

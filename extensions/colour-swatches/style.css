@@ -1,0 +1,10 @@
+/* the little square before a colour */
+.aexs {
+  display: inline-block;
+  width: 0.78em;
+  height: 0.78em;
+  margin: 0 4px 0 1px;
+  border-radius: 3px;
+  vertical-align: -0.05em;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--text, #888) 45%, transparent);
+}

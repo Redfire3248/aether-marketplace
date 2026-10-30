@@ -1,0 +1,16 @@
+{
+  "id": "colour-swatches",
+  "name": "Colour Swatches",
+  "version": "1.0.0",
+  "description": "A small square of the colour before every colour in your code: #hex, rgb() and hsl(), in CSS, HTML, JS, JSON and more.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "css",
+    "colours",
+    "web"
+  ],
+  "aether": ">=1.9.22",
+  "style": "style.css"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "focus-timer",
+  "name": "Focus Timer",
+  "version": "1.0.0",
+  "description": "Focus in blocks with breaks between, from the status bar. It chimes at the end and counts your blocks for the day.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "clock",
+  "tags": [
+    "productivity",
+    "timer"
+  ],
+  "aether": ">=1.9.22"
+}
