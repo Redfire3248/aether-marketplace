@@ -246,9 +246,10 @@ footer nav { display: flex; flex-wrap: wrap; gap: 16px; margin-left: auto; }
 .theme-card.pixel:hover { transform: translate(-1px, -1px); border-color: var(--t-accent); box-shadow: 5px 5px 0 #000; }
 .theme-card.pixel::after { display: block; inset: 0; width: auto; height: auto; border-radius: 0; opacity: 1; transform: none; background: repeating-linear-gradient(0deg, #0000 0 2px, #00000014 2px 3px); transition: none; }
 .theme-card.pixel:hover::after { opacity: 1; transform: none; }
-.theme-card.pixel h3 { font-family: inherit; font-size: 30px; font-weight: 400; letter-spacing: 0; line-height: 1; text-shadow: 3px 3px 0 #000; }
-.theme-card.pixel p { font-size: 20px; line-height: 1.2; }
-.theme-card.pixel .t-btn { border: 2px solid #000; border-radius: 0; background: var(--t-accent); color: var(--t-accentText); box-shadow: 3px 3px 0 #000; font-size: 20px; font-weight: 400; line-height: 1; padding: 4px 13px; }
+.theme-card.pixel h3 { font-family: inherit; font-size: 23px; font-weight: 400; letter-spacing: 0; line-height: 1; text-shadow: 2px 2px 0 #000; }
+.theme-card.pixel.light h3 { text-shadow: 2px 2px 0 var(--t-border); }
+.theme-card.pixel p { font-size: 17px; line-height: 1.15; }
+.theme-card.pixel .t-btn { border: 2px solid #000; border-radius: 0; background: var(--t-accent); color: var(--t-accentText); box-shadow: 3px 3px 0 #000; font-size: 17px; font-weight: 400; line-height: 1; padding: 4px 13px; }
 .theme-card.pixel .by { font-family: "Departure Mono", monospace; font-size: 11px; letter-spacing: 0; }
 /* the tabs: one highlight that slides */
 .cats { position: relative; }

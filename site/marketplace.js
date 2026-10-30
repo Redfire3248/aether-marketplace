@@ -43,7 +43,7 @@
     function themeCard(x, i) {
       const p = x.preview, v = Object.entries(p).map(([k, c]) => `--t-${k}:${safe(c)}`).join(';');
       return `
-        <a class="card ext theme-card${(x.tags || []).includes('pixel') ? ' pixel' : ''}" style="${v};--i:${i}" href="extension.html?id=${encodeURIComponent(x.id)}">
+        <a class="card ext theme-card${(x.tags || []).includes('pixel') ? ' pixel' : ''}${(x.tags || []).includes('light') ? ' light' : ''}" style="${v};--i:${i}" href="extension.html?id=${encodeURIComponent(x.id)}">
           <h3>${esc(x.name)}</h3>
           <p>${esc(x.description)}</p>
           <div class="t-foot"><span class="t-btn">${(x.tags || []).includes('pixel') ? 'Pixel' : (x.tags || []).includes('light') ? 'Light' : 'Dark'}</span><span class="by">v${esc(x.version)}</span></div>
