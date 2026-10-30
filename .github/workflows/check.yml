@@ -14,3 +14,4 @@ jobs:
         with:
           node-version: 22
       - run: node tools/build-index.js --check
+      - run: npm test

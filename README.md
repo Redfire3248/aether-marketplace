@@ -16,6 +16,12 @@ They install in a moment, start at once, and update with one click when a new ve
 | [Colour Swatches](extensions/colour-swatches) | A square of the colour before every colour in your code. |
 | [Quick Insert](extensions/quick-insert) | Placeholder text, dates, times, unique ids, strong passwords, random numbers. |
 | [Pet Pack](extensions/pet-pack) | A frog, a penguin and a bunny to visit you, with skins. |
+| [JSON Tools](extensions/json-tools) | Format, minify or sort the keys of JSON, and see where the error is when it is not valid. |
+| [Markdown Tables](extensions/markdown-tables) | Line up a table's columns, add a row or a column, and turn CSV or tab-separated text into a table. |
+| [Git Line](extensions/git-line) | Who last changed the cursor's line and when, in the status bar. Click it for the commit message. |
+| [Regex Lab](extensions/regex-lab) | A tab to try a regular expression on some text, with the matches highlighted and the groups listed. |
+| [HTML Quick](extensions/html-quick) | Type `ul>li*3` or `div.card>h2+p` and press Ctrl+Alt+E to turn it into HTML. |
+| [Theme Pack](extensions/theme-pack) | Five easy-to-read colour themes: Deep Sea, Ember, Forest Night, Paper and Glacier. |
 
 ## Share your own
 
@@ -25,6 +31,7 @@ They install in a moment, start at once, and update with one click when a new ve
    - `main.js` (or the file named in `main`);
    - `README.md` saying what it does and how to use it.
 3. Run `node tools/build-index.js` and commit `index.json` with it.
+   You can add tests too, in `tests/<your-id>.test.js` (Node's test runner, with the small fake `aether` in `tests/fake-aether.js`). Run them with `npm test`.
 4. Open a pull request. The check runs on it, then the extension is read through before it goes in.
 
 ### What goes in

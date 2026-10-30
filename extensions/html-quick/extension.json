@@ -1,0 +1,15 @@
+{
+  "id": "html-quick",
+  "name": "HTML Quick",
+  "version": "1.0.0",
+  "description": "Type a short abbreviation like ul>li*3 or div.card>h2+p and press Ctrl+Alt+E to turn it into HTML.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "code",
+  "tags": [
+    "html",
+    "web",
+    "snippets"
+  ],
+  "aether": ">=1.9.22"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "markdown-tables",
+  "name": "Markdown Tables",
+  "version": "1.0.0",
+  "description": "Line up the columns of the table the cursor is in, add a row or a column, and turn comma- or tab-separated text into a table.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "grid",
+  "tags": [
+    "markdown",
+    "writing",
+    "editing"
+  ],
+  "aether": ">=1.9.22"
+}
