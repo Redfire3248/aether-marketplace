@@ -209,11 +209,116 @@
       "size": 4866
     },
     {
+      "id": "theme-arctic-night",
+      "name": "Arctic Night",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Cold and clear: midnight blue with icy light.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#0a111c",
+        "panel": "#0f1826",
+        "editor": "#0c1420",
+        "border": "#2b4160",
+        "text": "#eaf3ff",
+        "muted": "#9fb5d1",
+        "accent": "#7cc7ff",
+        "accentText": "#04182a",
+        "keyword": "#9dc4ff",
+        "string": "#a8ecd0",
+        "fn": "#7cd9ff",
+        "number": "#ffc58a",
+        "comment": "#7d93ae"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1896
+    },
+    {
+      "id": "theme-blood-moon",
+      "name": "Blood Moon",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Dark and dramatic: black-red with a burning crimson.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#120809",
+        "panel": "#1a0c0e",
+        "editor": "#160a0c",
+        "border": "#4a2226",
+        "text": "#fbeaea",
+        "muted": "#c99fa2",
+        "accent": "#ff4d5e",
+        "accentText": "#2a0407",
+        "keyword": "#ff6b78",
+        "string": "#ffd08a",
+        "fn": "#ff9fa8",
+        "number": "#ffa35c",
+        "comment": "#a88083"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1899
+    },
+    {
+      "id": "theme-cyber-noir",
+      "name": "Cyber Noir",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Black and electric yellow, straight out of the future.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#0a0a0c",
+        "panel": "#111114",
+        "editor": "#0e0e11",
+        "border": "#34343c",
+        "text": "#f2f2ee",
+        "muted": "#a9a9a4",
+        "accent": "#f5e400",
+        "accentText": "#141400",
+        "keyword": "#f5e400",
+        "string": "#7dff8a",
+        "fn": "#00e5ff",
+        "number": "#ff9e4d",
+        "comment": "#85857f"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1905
+    },
+    {
       "id": "theme-deep-sea",
       "name": "Deep Sea",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Dark and calm, deep blues with teal. A colour theme for all of Aether and your code.",
+      "description": "Dark and calm, deep blues with teal.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -241,14 +346,14 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1929
+      "size": 1881
     },
     {
       "id": "theme-ember",
       "name": "Ember",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Dark and warm, browns with a glowing orange. A colour theme for all of Aether and your code.",
+      "description": "Dark and warm, browns with a glowing orange.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -276,14 +381,14 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1926
+      "size": 1878
     },
     {
       "id": "theme-forest-night",
       "name": "Forest Night",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Dark and quiet, deep greens with mint. A colour theme for all of Aether and your code.",
+      "description": "Dark and quiet, deep greens with mint.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -311,14 +416,14 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1971
+      "size": 1923
     },
     {
       "id": "theme-glacier",
       "name": "Glacier",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Light and cool, crisp blues and greys. A colour theme for all of Aether and your code.",
+      "description": "Light and cool, crisp blues and greys.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -346,14 +451,84 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1928
+      "size": 1880
+    },
+    {
+      "id": "theme-lavender-mist",
+      "name": "Lavender Mist",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Light and soft: pale purple with deep violet ink.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "light"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#f1edf8",
+        "panel": "#e8e2f2",
+        "editor": "#faf8fd",
+        "border": "#c4b8da",
+        "text": "#241d33",
+        "muted": "#584e6e",
+        "accent": "#6a3fc4",
+        "accentText": "#ffffff",
+        "keyword": "#6a3fc4",
+        "string": "#2c7a4b",
+        "fn": "#1f62b8",
+        "number": "#a8500f",
+        "comment": "#6c6280"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1919
+    },
+    {
+      "id": "theme-matcha",
+      "name": "Matcha",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Calm and light: creamy green tea with deep leaf green.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "light"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#eef0e0",
+        "panel": "#e3e7d2",
+        "editor": "#f7f8ec",
+        "border": "#bcc4a0",
+        "text": "#20261a",
+        "muted": "#525c44",
+        "accent": "#44701c",
+        "accentText": "#ffffff",
+        "keyword": "#5d6d1a",
+        "string": "#2f7a3f",
+        "fn": "#1f6a87",
+        "number": "#a14f12",
+        "comment": "#667054"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1871
     },
     {
       "id": "theme-mint-cream",
       "name": "Mint Cream",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Light and fresh, soft greens. A colour theme for all of Aether and your code.",
+      "description": "Light and fresh, soft greens.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -381,14 +556,14 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1928
+      "size": 1880
     },
     {
       "id": "theme-neon-tide",
       "name": "Neon Tide",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Dark and bright, glowing teal and pink. A colour theme for all of Aether and your code.",
+      "description": "Dark and bright, glowing teal and pink.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -416,14 +591,14 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1947
+      "size": 1899
     },
     {
       "id": "theme-paper",
       "name": "Paper",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Light and warm, like a page in a book. A colour theme for all of Aether and your code.",
+      "description": "Light and warm, like a page in a book.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -451,14 +626,230 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1910
+      "size": 1862
+    },
+    {
+      "id": "theme-pixel-amber",
+      "name": "Pixel Amber",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "An old amber monitor: warm glowing orange on black.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark",
+        "pixel"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#120c02",
+        "panel": "#1a1205",
+        "editor": "#150f03",
+        "border": "#4a3814",
+        "text": "#ffe6b0",
+        "muted": "#c9a86b",
+        "accent": "#ffb000",
+        "accentText": "#1f1400",
+        "keyword": "#ffb000",
+        "string": "#ffd98a",
+        "fn": "#ffe0a0",
+        "number": "#ffc94d",
+        "comment": "#a58a58"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1972
+    },
+    {
+      "id": "theme-pixel-cherry",
+      "name": "Pixel Cherry",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Square pixels with a bite: dark red with cherry pink.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark",
+        "pixel"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#1d0b12",
+        "panel": "#27101a",
+        "editor": "#220d16",
+        "border": "#5a2a3f",
+        "text": "#ffeaf0",
+        "muted": "#cda0b0",
+        "accent": "#ff5c8a",
+        "accentText": "#2a0612",
+        "keyword": "#ff5c8a",
+        "string": "#ffd479",
+        "fn": "#ff9ecb",
+        "number": "#ffa45c",
+        "comment": "#a97f90"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1987
+    },
+    {
+      "id": "theme-pixel-mint",
+      "name": "Pixel Mint",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Square pixels, cool and clean: deep teal with bright mint.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark",
+        "pixel"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#0b1f1e",
+        "panel": "#102826",
+        "editor": "#0d2322",
+        "border": "#2a5a54",
+        "text": "#e6fff8",
+        "muted": "#94c7bb",
+        "accent": "#5cf2c0",
+        "accentText": "#06241c",
+        "keyword": "#5cf2c0",
+        "string": "#c5f277",
+        "fn": "#7fd0ff",
+        "number": "#ffb86b",
+        "comment": "#739f94"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1984
+    },
+    {
+      "id": "theme-pixel-paper",
+      "name": "Pixel Paper",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Square pixels on a light page: cream with bold ink.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "light",
+        "pixel"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#f3ead8",
+        "panel": "#e9dec8",
+        "editor": "#f9f2e4",
+        "border": "#b5a586",
+        "text": "#221c12",
+        "muted": "#5c5240",
+        "accent": "#a8360f",
+        "accentText": "#ffffff",
+        "keyword": "#a8360f",
+        "string": "#2f6b1f",
+        "fn": "#1b5e8c",
+        "number": "#96500a",
+        "comment": "#6e6450"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1974
+    },
+    {
+      "id": "theme-pixel-sunset",
+      "name": "Pixel Sunset",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Square pixels at dusk: deep purple with orange and pink.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark",
+        "pixel"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#1c1030",
+        "panel": "#241538",
+        "editor": "#20122f",
+        "border": "#4d3270",
+        "text": "#f8ecff",
+        "muted": "#b9a6d4",
+        "accent": "#ff9d4d",
+        "accentText": "#26120a",
+        "keyword": "#ff9d4d",
+        "string": "#ffe08a",
+        "fn": "#7fd4ff",
+        "number": "#ff6fa8",
+        "comment": "#9c88bd"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1996
+    },
+    {
+      "id": "theme-pixel-vapor",
+      "name": "Pixel Vapor",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Square pixels, loud and pink: hot pink and cyan on indigo.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark",
+        "pixel"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#130f2e",
+        "panel": "#1a1540",
+        "editor": "#161138",
+        "border": "#443a8a",
+        "text": "#f4f0ff",
+        "muted": "#b3a9e0",
+        "accent": "#ff71ce",
+        "accentText": "#2a0520",
+        "keyword": "#ff71ce",
+        "string": "#05ffa1",
+        "fn": "#01cdfe",
+        "number": "#fffb96",
+        "comment": "#9288c4"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1993
     },
     {
       "id": "theme-plum-dusk",
       "name": "Plum Dusk",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Dark and soft, deep purples with pink. A colour theme for all of Aether and your code.",
+      "description": "Dark and soft, deep purples with pink.",
       "icon": "palette",
       "tags": [
         "themes",
@@ -486,7 +877,42 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1944
+      "size": 1896
+    },
+    {
+      "id": "theme-tokyo-rain",
+      "name": "Tokyo Rain",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "City lights in the rain: deep indigo with neon signs.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#10111f",
+        "panel": "#15172a",
+        "editor": "#121425",
+        "border": "#383e64",
+        "text": "#e8eaff",
+        "muted": "#a6abd2",
+        "accent": "#7aa2ff",
+        "accentText": "#0b1030",
+        "keyword": "#bb9af7",
+        "string": "#9ece6a",
+        "fn": "#7aa2ff",
+        "number": "#ff9e64",
+        "comment": "#868bb5"
+      },
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1902
     },
     {
       "id": "word-count",

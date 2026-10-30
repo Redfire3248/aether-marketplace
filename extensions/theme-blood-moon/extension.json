@@ -1,0 +1,30 @@
+{
+  "id": "theme-blood-moon",
+  "name": "Blood Moon",
+  "version": "1.0.0",
+  "description": "Dark and dramatic: black-red with a burning crimson.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#120809",
+    "panel": "#1a0c0e",
+    "editor": "#160a0c",
+    "border": "#4a2226",
+    "text": "#fbeaea",
+    "muted": "#c99fa2",
+    "accent": "#ff4d5e",
+    "accentText": "#2a0407",
+    "keyword": "#ff6b78",
+    "string": "#ffd08a",
+    "fn": "#ff9fa8",
+    "number": "#ffa35c",
+    "comment": "#a88083"
+  },
+  "aether": ">=1.9.25"
+}

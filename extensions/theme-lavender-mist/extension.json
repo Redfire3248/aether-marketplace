@@ -1,0 +1,30 @@
+{
+  "id": "theme-lavender-mist",
+  "name": "Lavender Mist",
+  "version": "1.0.0",
+  "description": "Light and soft: pale purple with deep violet ink.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "light"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#f1edf8",
+    "panel": "#e8e2f2",
+    "editor": "#faf8fd",
+    "border": "#c4b8da",
+    "text": "#241d33",
+    "muted": "#584e6e",
+    "accent": "#6a3fc4",
+    "accentText": "#ffffff",
+    "keyword": "#6a3fc4",
+    "string": "#2c7a4b",
+    "fn": "#1f62b8",
+    "number": "#a8500f",
+    "comment": "#6c6280"
+  },
+  "aether": ">=1.9.25"
+}

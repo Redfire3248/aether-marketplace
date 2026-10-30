@@ -1,0 +1,31 @@
+{
+  "id": "theme-pixel-mint",
+  "name": "Pixel Mint",
+  "version": "1.0.0",
+  "description": "Square pixels, cool and clean: deep teal with bright mint.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark",
+    "pixel"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#0b1f1e",
+    "panel": "#102826",
+    "editor": "#0d2322",
+    "border": "#2a5a54",
+    "text": "#e6fff8",
+    "muted": "#94c7bb",
+    "accent": "#5cf2c0",
+    "accentText": "#06241c",
+    "keyword": "#5cf2c0",
+    "string": "#c5f277",
+    "fn": "#7fd0ff",
+    "number": "#ffb86b",
+    "comment": "#739f94"
+  },
+  "aether": ">=1.9.25"
+}

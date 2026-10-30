@@ -1,0 +1,31 @@
+{
+  "id": "theme-pixel-cherry",
+  "name": "Pixel Cherry",
+  "version": "1.0.0",
+  "description": "Square pixels with a bite: dark red with cherry pink.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark",
+    "pixel"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#1d0b12",
+    "panel": "#27101a",
+    "editor": "#220d16",
+    "border": "#5a2a3f",
+    "text": "#ffeaf0",
+    "muted": "#cda0b0",
+    "accent": "#ff5c8a",
+    "accentText": "#2a0612",
+    "keyword": "#ff5c8a",
+    "string": "#ffd479",
+    "fn": "#ff9ecb",
+    "number": "#ffa45c",
+    "comment": "#a97f90"
+  },
+  "aether": ">=1.9.25"
+}

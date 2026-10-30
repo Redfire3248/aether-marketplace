@@ -1,0 +1,31 @@
+{
+  "id": "theme-pixel-paper",
+  "name": "Pixel Paper",
+  "version": "1.0.0",
+  "description": "Square pixels on a light page: cream with bold ink.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "light",
+    "pixel"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#f3ead8",
+    "panel": "#e9dec8",
+    "editor": "#f9f2e4",
+    "border": "#b5a586",
+    "text": "#221c12",
+    "muted": "#5c5240",
+    "accent": "#a8360f",
+    "accentText": "#ffffff",
+    "keyword": "#a8360f",
+    "string": "#2f6b1f",
+    "fn": "#1b5e8c",
+    "number": "#96500a",
+    "comment": "#6e6450"
+  },
+  "aether": ">=1.9.25"
+}

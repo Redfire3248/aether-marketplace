@@ -1,0 +1,31 @@
+{
+  "id": "theme-pixel-sunset",
+  "name": "Pixel Sunset",
+  "version": "1.0.0",
+  "description": "Square pixels at dusk: deep purple with orange and pink.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark",
+    "pixel"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#1c1030",
+    "panel": "#241538",
+    "editor": "#20122f",
+    "border": "#4d3270",
+    "text": "#f8ecff",
+    "muted": "#b9a6d4",
+    "accent": "#ff9d4d",
+    "accentText": "#26120a",
+    "keyword": "#ff9d4d",
+    "string": "#ffe08a",
+    "fn": "#7fd4ff",
+    "number": "#ff6fa8",
+    "comment": "#9c88bd"
+  },
+  "aether": ">=1.9.25"
+}

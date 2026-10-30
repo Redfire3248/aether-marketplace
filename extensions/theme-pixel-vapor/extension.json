@@ -1,0 +1,31 @@
+{
+  "id": "theme-pixel-vapor",
+  "name": "Pixel Vapor",
+  "version": "1.0.0",
+  "description": "Square pixels, loud and pink: hot pink and cyan on indigo.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark",
+    "pixel"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#130f2e",
+    "panel": "#1a1540",
+    "editor": "#161138",
+    "border": "#443a8a",
+    "text": "#f4f0ff",
+    "muted": "#b3a9e0",
+    "accent": "#ff71ce",
+    "accentText": "#2a0520",
+    "keyword": "#ff71ce",
+    "string": "#05ffa1",
+    "fn": "#01cdfe",
+    "number": "#fffb96",
+    "comment": "#9288c4"
+  },
+  "aether": ">=1.9.25"
+}

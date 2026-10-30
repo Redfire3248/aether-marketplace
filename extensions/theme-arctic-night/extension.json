@@ -1,0 +1,30 @@
+{
+  "id": "theme-arctic-night",
+  "name": "Arctic Night",
+  "version": "1.0.0",
+  "description": "Cold and clear: midnight blue with icy light.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#0a111c",
+    "panel": "#0f1826",
+    "editor": "#0c1420",
+    "border": "#2b4160",
+    "text": "#eaf3ff",
+    "muted": "#9fb5d1",
+    "accent": "#7cc7ff",
+    "accentText": "#04182a",
+    "keyword": "#9dc4ff",
+    "string": "#a8ecd0",
+    "fn": "#7cd9ff",
+    "number": "#ffc58a",
+    "comment": "#7d93ae"
+  },
+  "aether": ">=1.9.25"
+}

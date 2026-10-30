@@ -1,0 +1,31 @@
+{
+  "id": "theme-pixel-amber",
+  "name": "Pixel Amber",
+  "version": "1.0.0",
+  "description": "An old amber monitor: warm glowing orange on black.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark",
+    "pixel"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#120c02",
+    "panel": "#1a1205",
+    "editor": "#150f03",
+    "border": "#4a3814",
+    "text": "#ffe6b0",
+    "muted": "#c9a86b",
+    "accent": "#ffb000",
+    "accentText": "#1f1400",
+    "keyword": "#ffb000",
+    "string": "#ffd98a",
+    "fn": "#ffe0a0",
+    "number": "#ffc94d",
+    "comment": "#a58a58"
+  },
+  "aether": ">=1.9.25"
+}

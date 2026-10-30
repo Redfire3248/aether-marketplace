@@ -31,6 +31,18 @@ They install in a moment, start at once, and update with one click when a new ve
 | [Plum Dusk](extensions/theme-plum-dusk) | Theme. Dark and soft, deep purples with pink. |
 | [Mint Cream](extensions/theme-mint-cream) | Theme. Light and fresh, soft greens. |
 | [Neon Tide](extensions/theme-neon-tide) | Theme. Dark and bright, glowing teal and pink. |
+| [Pixel Sunset](extensions/theme-pixel-sunset) | Theme. Square pixels at dusk: deep purple with orange and pink. |
+| [Pixel Mint](extensions/theme-pixel-mint) | Theme. Square pixels, cool and clean: deep teal with bright mint. |
+| [Pixel Cherry](extensions/theme-pixel-cherry) | Theme. Square pixels with a bite: dark red with cherry pink. |
+| [Pixel Amber](extensions/theme-pixel-amber) | Theme. An old amber monitor: warm glowing orange on black. |
+| [Pixel Vapor](extensions/theme-pixel-vapor) | Theme. Square pixels, loud and pink: hot pink and cyan on indigo. |
+| [Pixel Paper](extensions/theme-pixel-paper) | Theme. Square pixels on a light page: cream with bold ink. |
+| [Cyber Noir](extensions/theme-cyber-noir) | Theme. Black and electric yellow, straight out of the future. |
+| [Blood Moon](extensions/theme-blood-moon) | Theme. Dark and dramatic: black-red with a burning crimson. |
+| [Arctic Night](extensions/theme-arctic-night) | Theme. Cold and clear: midnight blue with icy light. |
+| [Tokyo Rain](extensions/theme-tokyo-rain) | Theme. City lights in the rain: deep indigo with neon signs. |
+| [Lavender Mist](extensions/theme-lavender-mist) | Theme. Light and soft: pale purple with deep violet ink. |
+| [Matcha](extensions/theme-matcha) | Theme. Calm and light: creamy green tea with deep leaf green. |
 
 ## Share your own
 

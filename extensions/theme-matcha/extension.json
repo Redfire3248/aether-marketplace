@@ -1,0 +1,30 @@
+{
+  "id": "theme-matcha",
+  "name": "Matcha",
+  "version": "1.0.0",
+  "description": "Calm and light: creamy green tea with deep leaf green.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "light"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#eef0e0",
+    "panel": "#e3e7d2",
+    "editor": "#f7f8ec",
+    "border": "#bcc4a0",
+    "text": "#20261a",
+    "muted": "#525c44",
+    "accent": "#44701c",
+    "accentText": "#ffffff",
+    "keyword": "#5d6d1a",
+    "string": "#2f7a3f",
+    "fn": "#1f6a87",
+    "number": "#a14f12",
+    "comment": "#667054"
+  },
+  "aether": ">=1.9.25"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "theme-tokyo-rain",
+  "name": "Tokyo Rain",
+  "version": "1.0.0",
+  "description": "City lights in the rain: deep indigo with neon signs.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#10111f",
+    "panel": "#15172a",
+    "editor": "#121425",
+    "border": "#383e64",
+    "text": "#e8eaff",
+    "muted": "#a6abd2",
+    "accent": "#7aa2ff",
+    "accentText": "#0b1030",
+    "keyword": "#bb9af7",
+    "string": "#9ece6a",
+    "fn": "#7aa2ff",
+    "number": "#ff9e64",
+    "comment": "#868bb5"
+  },
+  "aether": ">=1.9.25"
+}

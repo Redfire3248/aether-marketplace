@@ -28,35 +28,33 @@
       return ws.every((w) => hay.includes(w));
     };
 
+    tagsEl.innerHTML = '<i class="cat-pill"></i>' + [['', 'All', all.length], ...CATS.map((c) => [c, c, inCat(c)])]
+      .map(([value, label, n]) => `<button class="cat" type="button" role="tab" data-cat="${esc(value)}">${esc(label)} <span class="count">${n}</span></button>`).join('');
+    const pill = tagsEl.querySelector('.cat-pill');
     function drawTags() {
-      tagsEl.innerHTML = [['', 'All', all.length], ...CATS.map((c) => [c, c, inCat(c)])]
-        .map(([value, label, n]) => `<button class="cat" type="button" role="tab" data-cat="${esc(value)}" aria-selected="${cat === value}">${esc(label)} <span class="count">${n}</span></button>`).join('');
+      for (const b of tagsEl.querySelectorAll('.cat')) {
+        const on = b.dataset.cat === cat; b.setAttribute('aria-selected', on);
+        if (on) { pill.style.width = b.offsetWidth + 'px'; pill.style.height = b.offsetHeight + 'px'; pill.style.transform = `translate(${b.offsetLeft}px, ${b.offsetTop}px)`; }
+      }
     }
+    addEventListener('resize', drawTags);
     // a theme's card is painted in the theme itself, with a little code window to show its colours
     const safe = (c) => (/^#[0-9a-f]{6}$/i.test(c || '') ? c : 'transparent');
-    function themeCard(x) {
+    function themeCard(x, i) {
       const p = x.preview, v = Object.entries(p).map(([k, c]) => `--t-${k}:${safe(c)}`).join(';');
       return `
-        <a class="card ext theme-card" style="${v}" href="extension.html?id=${encodeURIComponent(x.id)}">
-          <div class="t-win" aria-hidden="true">
-            <div class="t-bar"><i></i><i></i><i></i><span>main.aes</span></div>
-            <pre class="t-code"><span class="c"># say hello</span>
-<span class="k">func</span> <span class="f">greet</span>(name):
-  <span class="k">return</span> <span class="s">"Hello"</span>
-
-score = <span class="n">42</span></pre>
-          </div>
+        <a class="card ext theme-card${(x.tags || []).includes('pixel') ? ' pixel' : ''}" style="${v};--i:${i}" href="extension.html?id=${encodeURIComponent(x.id)}">
           <h3>${esc(x.name)}</h3>
           <p>${esc(x.description)}</p>
-          <div class="t-foot"><span class="t-btn">${(x.tags || []).includes('light') ? 'Light' : 'Dark'}</span><span class="by">${esc(x.author)} · v${esc(x.version)}</span></div>
+          <div class="t-foot"><span class="t-btn">${(x.tags || []).includes('pixel') ? 'Pixel' : (x.tags || []).includes('light') ? 'Light' : 'Dark'}</span><span class="by">v${esc(x.version)}</span></div>
         </a>`;
     }
     function draw() {
       const ws = words(q.value);
       const shown = all.filter((x) => (!cat || x.category === cat) && matches(x, ws));
       count.textContent = shown.length === all.length ? `${all.length} extensions` : `${shown.length} of ${all.length} extensions`;
-      list.innerHTML = shown.length ? shown.map((x) => (x.preview ? themeCard(x) : `
-        <a class="card ext" href="extension.html?id=${encodeURIComponent(x.id)}">
+      list.innerHTML = shown.length ? shown.map((x, i) => (x.preview ? themeCard(x, i) : `
+        <a class="card ext" style="--i:${i}" href="extension.html?id=${encodeURIComponent(x.id)}">
           <div class="head">
             <span class="badge">${icon(x.icon)}</span>
             <div><h3>${esc(x.name)}</h3><div class="by">${esc(x.author)} · v${esc(x.version)}</div></div>

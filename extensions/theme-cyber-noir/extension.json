@@ -1,0 +1,30 @@
+{
+  "id": "theme-cyber-noir",
+  "name": "Cyber Noir",
+  "version": "1.0.0",
+  "description": "Black and electric yellow, straight out of the future.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#0a0a0c",
+    "panel": "#111114",
+    "editor": "#0e0e11",
+    "border": "#34343c",
+    "text": "#f2f2ee",
+    "muted": "#a9a9a4",
+    "accent": "#f5e400",
+    "accentText": "#141400",
+    "keyword": "#f5e400",
+    "string": "#7dff8a",
+    "fn": "#00e5ff",
+    "number": "#ff9e4d",
+    "comment": "#85857f"
+  },
+  "aether": ">=1.9.25"
+}
