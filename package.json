@@ -4,7 +4,7 @@
   "description": "Extensions for Aether, and the Aether website.",
   "license": "MIT",
   "scripts": {
-    "test": "node --test \"tests/*.test.js\"",
+    "test": "node --test tests/",
     "check": "node tools/build-index.js --check"
   }
 }

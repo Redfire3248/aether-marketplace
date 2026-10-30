@@ -89,3 +89,21 @@ test('the command turns the abbreviation into a snippet', async () => {
   assert.deepStrictEqual(plain(selected), { startLineNumber: 1, startColumn: 3, endLineNumber: 1, endColumn: 10 });
   assert.strictEqual(inserted, '<nav>\n    <a href="${1}">${2}</a>\n    <a href="${3}">${4}</a>\n</nav>');
 });
+
+test('Ctrl+Alt+E is bound in the code editor too, and let go when turned off', async () => {
+  const rules = [], commands = {}, gone = [];
+  const monaco = {
+    KeyMod: { CtrlCmd: 2048, Shift: 1024, Alt: 512 }, KeyCode: { KeyE: 35 },
+    editor: {
+      registerCommand: (id, fn) => { commands[id] = fn; return { dispose: () => gone.push('command') }; },
+      addKeybindingRule: (r) => { rules.push(r); return { dispose: () => gone.push('key') }; }
+    }
+  };
+  const ext = load('html-quick', { monaco });
+  assert.deepStrictEqual(plain(rules), [{ keybinding: 2048 | 512 | 35, command: 'html-quick-expand', when: 'editorTextFocus' }]);
+  ext.editor = null;
+  await commands['html-quick-expand']();
+  assert.match(ext.did.toasts.at(-1).message, /Open a file/);
+  ext.dispose();
+  assert.deepStrictEqual(gone.sort(), ['command', 'key']);
+});

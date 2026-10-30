@@ -28,4 +28,4 @@ In React files (`.jsx`, `.tsx`) it writes `className` and `htmlFor`, and closes 
 
 **HTML: Wrap the Selection in an Abbreviation** puts the selected text inside new HTML, like `div.box` or `ul>li`.
 
-**Ctrl+Alt+E** is also the shortcut of Aether AI's **Edit Selection**. If that one opens, use **Ctrl+Alt+H**, or change either in Keyboard Shortcuts.
+While HTML Quick is on, **Ctrl+Alt+E** in the code editor expands abbreviations, in place of Aether AI's **Edit Selection** (still in the Command Palette, Ctrl+Shift+P). Turn HTML Quick off and Ctrl+Alt+E is AI's again. **Ctrl+Alt+H** does the same as Ctrl+Alt+E, and you can change it in Keyboard Shortcuts.

@@ -189,6 +189,15 @@ function run() {
 }
 
 aether.commands.register('expand', 'HTML: Expand the Abbreviation', run, { key: ['ctrl+alt+e', 'ctrl+alt+h'], category: 'HTML Quick' });
+
+// In Aether's own list of shortcuts, Ctrl+Alt+E belongs to AI: Edit Selection, which came first. So it is bound in
+// the code editor too: the editor hears a key before Aether's list does, and takes it.
+try {
+  const M = aether.monaco;
+  const command = M.editor.registerCommand('html-quick-expand', () => run());
+  const key = M.editor.addKeybindingRule({ keybinding: M.KeyMod.CtrlCmd | M.KeyMod.Alt | M.KeyCode.KeyE, command: 'html-quick-expand', when: 'editorTextFocus' });
+  aether.onDispose(() => { key.dispose(); command.dispose(); });
+} catch { /* no editor library here: Ctrl+Alt+H and the Command Palette still work */ }
 aether.commands.register('wrap', 'HTML: Wrap the Selection in an Abbreviation', async () => {
   const ed = aether.editor.active();
   if (!ed || !ed.selectionText()) return aether.window.toast('Select some text first');

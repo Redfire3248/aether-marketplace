@@ -34,7 +34,7 @@ function fakeEditor(text, { path: p = '/project/file.txt', language = 'plaintext
   };
 }
 
-function load(id, { editor = null, exec, settings = {}, globals = {} } = {}) {
+function load(id, { editor = null, exec, settings = {}, globals = {}, monaco } = {}) {
   const file = path.join(__dirname, '..', 'extensions', id, 'main.js');
   const did = { commands: {}, toasts: [], status: [], views: {}, opened: [], themes: [], picks: [], disposers: [], listeners: {}, execs: [], terminal: [] };
   const own = (x) => ({ dispose() {}, ...x });
@@ -83,7 +83,8 @@ function load(id, { editor = null, exec, settings = {}, globals = {} } = {}) {
     settings: { get: (k, d) => (k in settings ? settings[k] : d), set: (k, v) => { settings[k] = v; } },
     on(ev, fn) { (did.listeners[ev] = did.listeners[ev] || []).push(fn); return own(); },
     log() {},
-    onDispose(fn) { did.disposers.push(fn); return own(); }
+    onDispose(fn) { did.disposers.push(fn); return own(); },
+    monaco
   };
   const ext = {
     aether, did, editor,
