@@ -239,10 +239,17 @@ footer nav { display: flex; flex-wrap: wrap; gap: 16px; margin-left: auto; }
 .theme-card h3 { font-size: 21px; margin: 0; }
 .theme-card:hover { transform: translateY(-5px); box-shadow: inset 0 3px 0 var(--t-accent), 0 18px 40px -18px var(--t-accent); }
 .theme-card:hover::after { opacity: .42; transform: scale(1.25); }
-.theme-card.pixel { border-radius: 0; border-width: 2px; box-shadow: 5px 5px 0 var(--t-border); }
-.theme-card.pixel:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--t-accent); }
-.theme-card.pixel::after { display: none; }
-.theme-card.pixel .t-btn { border-radius: 0; }
+/* a pixel theme's card: the same rules as Aether's pixel style */
+@font-face { font-family: "Jersey 15"; src: url(fonts/jersey-15-latin-400-normal.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Departure Mono"; src: url(fonts/DepartureMono-Regular.woff2) format("woff2"); font-display: swap; }
+.theme-card.pixel { border: 3px solid var(--t-border); border-radius: 0; box-shadow: 4px 4px 0 #000; background: repeating-conic-gradient(color-mix(in srgb, var(--t-accent) 6%, transparent) 0 25%, transparent 0 50%) 0 0 / 8px 8px, var(--t-panel); font-family: "Jersey 15", "VT323", monospace; letter-spacing: .03em; -webkit-font-smoothing: none; font-synthesis: none; }
+.theme-card.pixel:hover { transform: translate(-1px, -1px); border-color: var(--t-accent); box-shadow: 5px 5px 0 #000; }
+.theme-card.pixel::after { display: block; inset: 0; width: auto; height: auto; border-radius: 0; opacity: 1; transform: none; background: repeating-linear-gradient(0deg, #0000 0 2px, #00000014 2px 3px); transition: none; }
+.theme-card.pixel:hover::after { opacity: 1; transform: none; }
+.theme-card.pixel h3 { font-family: inherit; font-size: 30px; font-weight: 400; letter-spacing: 0; line-height: 1; text-shadow: 3px 3px 0 #000; }
+.theme-card.pixel p { font-size: 20px; line-height: 1.2; }
+.theme-card.pixel .t-btn { border: 2px solid #000; border-radius: 0; background: var(--t-accent); color: var(--t-accentText); box-shadow: 3px 3px 0 #000; font-size: 20px; font-weight: 400; line-height: 1; padding: 4px 13px; }
+.theme-card.pixel .by { font-family: "Departure Mono", monospace; font-size: 11px; letter-spacing: 0; }
 /* the tabs: one highlight that slides */
 .cats { position: relative; }
 .cat { position: relative; z-index: 1; }
