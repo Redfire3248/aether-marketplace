@@ -4,6 +4,8 @@ Extensions for [Aether](https://github.com/Redfire3248), the code editor for eve
 
 **Extensions page (Ctrl+Shift+X) > Aether Marketplace > Install.**
 
+Or look through them on the website: **https://redfire3248.github.io/aether-marketplace/marketplace.html**
+
 They install in a moment, start at once, and update with one click when a new version is here.
 
 ## What's here
@@ -41,6 +43,18 @@ They install in a moment, start at once, and update with one click when a new ve
 - It cleans up after itself: use `aether.onDispose()` for timers, elements and listeners you add yourself.
 - Only `.js .json .md .css .png .svg .txt .wav .mp3 .ogg` files, 40 at most, 5 MB in all.
 - Updating one: raise its `version`, so people see **Update** in Aether.
+
+## The website
+
+[redfire3248.github.io/aether-marketplace](https://redfire3248.github.io/aether-marketplace/) is the home page for Aether and this Marketplace. It is in `site/`: plain HTML, CSS and a little JavaScript, with no build step. Every push to `main` publishes it (`.github/workflows/pages.yml`), with `index.json` and the `extensions/` folders next to it.
+
+To look at it on your own computer, serve the repository's folder and open `site/`:
+
+```
+python -m http.server 8000
+```
+
+Then go to http://localhost:8000/site/.
 
 ## License
 
