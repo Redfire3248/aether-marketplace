@@ -10,12 +10,21 @@
     "themes",
     "light"
   ],
-  "colors": [
-    "#f4efe6",
-    "#a84a22",
-    "#a3366d",
-    "#45701b",
-    "#1f5f99"
-  ],
-  "aether": ">=1.9.25"
+  "aether": ">=1.9.25",
+  "category": "Themes",
+  "preview": {
+    "bg": "#f4efe6",
+    "panel": "#ece5d8",
+    "editor": "#faf6ef",
+    "border": "#d6cbb8",
+    "text": "#2b2722",
+    "muted": "#61584e",
+    "accent": "#a84a22",
+    "accentText": "#ffffff",
+    "keyword": "#a3366d",
+    "string": "#45701b",
+    "fn": "#1f5f99",
+    "number": "#a84a22",
+    "comment": "#736a5e"
+  }
 }

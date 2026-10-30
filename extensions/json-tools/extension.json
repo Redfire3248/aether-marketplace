@@ -11,5 +11,6 @@
     "formatting",
     "data"
   ],
-  "aether": ">=1.9.22"
+  "aether": ">=1.9.22",
+  "category": "Code"
 }

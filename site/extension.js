@@ -23,7 +23,7 @@
         <div>
           <h1>${esc(x.name)}</h1>
           <div class="meta"><span>by ${esc(x.author)}</span><span>version ${esc(x.version)}</span><span>${size(x.size)}</span>${x.aether ? `<span>Aether ${esc(x.aether.replace('>=', ''))} or newer</span>` : ''}</div>
-          <div class="tagrow" style="margin-top:10px">${(x.tags || []).map((t) => `<a class="tag" href="marketplace.html?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div>
+          <div class="tagrow" style="margin-top:10px"><a class="tag" href="marketplace.html?cat=${encodeURIComponent(x.category || '')}">${esc(x.category || '')}</a></div>
         </div>
       </div>
       <p class="notice install"><b>To install:</b> in Aether, open <b>Extensions</b> (<kbd>Ctrl+Shift+X</kbd>) &gt; <b>Aether Marketplace</b>, find <b>${esc(x.name)}</b> and click <b>Install</b>. <a href="${source}">See its code</a>.</p>`;

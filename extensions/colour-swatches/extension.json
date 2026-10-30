@@ -12,5 +12,6 @@
     "web"
   ],
   "aether": ">=1.9.22",
-  "style": "style.css"
+  "style": "style.css",
+  "category": "Web"
 }

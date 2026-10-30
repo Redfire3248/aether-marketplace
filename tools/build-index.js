@@ -7,6 +7,7 @@ const ROOT = path.join(__dirname, '..');
 const EXT = path.join(ROOT, 'extensions');
 const FILE_OK = /^(?!.*\.\.)[\w-]+(\.[\w-]+)*(\/[\w-]+(\.[\w-]+)*)*\.(js|json|md|css|png|svg|txt|wav|mp3|ogg)$/i;
 const ID_OK = /^[a-z0-9][a-z0-9-]{1,40}$/;
+const CATEGORIES = ['Themes', 'Pets', 'Code', 'Web', 'Writing', 'Tools'];
 const problems = [];
 const out = [];
 
@@ -22,6 +23,7 @@ for (const id of fs.readdirSync(EXT).sort()) {
   if (man.id !== id) bad(`extension.json "id" must be "${id}"`);
   for (const k of ['name', 'version', 'description', 'author']) if (!man[k] || typeof man[k] !== 'string') bad(`extension.json needs "${k}"`);
   if (man.version && !/^\d+\.\d+\.\d+$/.test(man.version)) bad('"version" is like 1.0.0');
+  if (!CATEGORIES.includes(man.category)) bad('"category" is one of: ' + CATEGORIES.join(', '));
   const files = filesOf(dir).sort();
   for (const f of files) if (!FILE_OK.test(f)) bad(`${f}: only .js .json .md .css .png .svg .txt .wav .mp3 .ogg files`);
   if (!files.includes(man.main || 'main.js')) bad(`its main file (${man.main || 'main.js'}) is missing`);
@@ -34,7 +36,7 @@ for (const id of fs.readdirSync(EXT).sort()) {
     try { new Function(code); } catch (e) { bad(`${f}: ${e.message}`); }
     if (/\beval\s*\(|new Function\s*\(|require\s*\(\s*['"]child_process/.test(code)) bad(`${f}: eval, new Function and child_process are not allowed (use aether.shell.exec)`);
   }
-  out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', tags: man.tags || [], colors: man.colors || undefined, aether: man.aether || '', files, size });
+  out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', tags: man.tags || [], category: man.category, preview: man.preview || undefined, aether: man.aether || '', files, size });
 }
 
 if (problems.length) { console.error('Problems:\n- ' + problems.join('\n- ')); process.exit(1); }
