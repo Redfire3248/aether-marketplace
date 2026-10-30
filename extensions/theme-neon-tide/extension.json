@@ -1,0 +1,21 @@
+{
+  "id": "theme-neon-tide",
+  "name": "Neon Tide",
+  "version": "1.0.0",
+  "description": "Dark and bright, glowing teal and pink. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "colors": [
+    "#07101c",
+    "#22e0d0",
+    "#ff5fb0",
+    "#7dffb2",
+    "#5cc8ff"
+  ],
+  "aether": ">=1.9.25"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "theme-mint-cream",
+  "name": "Mint Cream",
+  "version": "1.0.0",
+  "description": "Light and fresh, soft greens. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "light"
+  ],
+  "colors": [
+    "#eef6f1",
+    "#0c6e52",
+    "#7a3fa6",
+    "#1e7b45",
+    "#1f62b8"
+  ],
+  "aether": ">=1.9.25"
+}

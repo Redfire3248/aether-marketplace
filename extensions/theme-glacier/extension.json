@@ -1,0 +1,21 @@
+{
+  "id": "theme-glacier",
+  "name": "Glacier",
+  "version": "1.0.0",
+  "description": "Light and cool, crisp blues and greys. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "light"
+  ],
+  "colors": [
+    "#eef3f8",
+    "#2563c9",
+    "#7a3fc4",
+    "#1e7b45",
+    "#2563c9"
+  ],
+  "aether": ">=1.9.25"
+}

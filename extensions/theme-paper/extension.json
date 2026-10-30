@@ -1,0 +1,21 @@
+{
+  "id": "theme-paper",
+  "name": "Paper",
+  "version": "1.0.0",
+  "description": "Light and warm, like a page in a book. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "light"
+  ],
+  "colors": [
+    "#f4efe6",
+    "#a84a22",
+    "#a3366d",
+    "#45701b",
+    "#1f5f99"
+  ],
+  "aether": ">=1.9.25"
+}

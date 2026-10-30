@@ -23,7 +23,14 @@ They install in a moment, start at once, and update with one click when a new ve
 | [Git Line](extensions/git-line) | Who last changed the cursor's line and when, in the status bar. Click it for the commit message. |
 | [Regex Lab](extensions/regex-lab) | A tab to try a regular expression on some text, with the matches highlighted and the groups listed. |
 | [HTML Quick](extensions/html-quick) | Type `ul>li*3` or `div.card>h2+p` and press Ctrl+Alt+E to turn it into HTML. |
-| [Theme Pack](extensions/theme-pack) | Five easy-to-read colour themes: Deep Sea, Ember, Forest Night, Paper and Glacier. |
+| [Deep Sea](extensions/theme-deep-sea) | Theme. Dark and calm, deep blues with teal. |
+| [Ember](extensions/theme-ember) | Theme. Dark and warm, browns with a glowing orange. |
+| [Forest Night](extensions/theme-forest-night) | Theme. Dark and quiet, deep greens with mint. |
+| [Paper](extensions/theme-paper) | Theme. Light and warm, like a page in a book. |
+| [Glacier](extensions/theme-glacier) | Theme. Light and cool, crisp blues and greys. |
+| [Plum Dusk](extensions/theme-plum-dusk) | Theme. Dark and soft, deep purples with pink. |
+| [Mint Cream](extensions/theme-mint-cream) | Theme. Light and fresh, soft greens. |
+| [Neon Tide](extensions/theme-neon-tide) | Theme. Dark and bright, glowing teal and pink. |
 
 ## Share your own
 

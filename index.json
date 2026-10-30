@@ -199,23 +199,212 @@
       "size": 4843
     },
     {
-      "id": "theme-pack",
-      "name": "Theme Pack",
+      "id": "theme-deep-sea",
+      "name": "Deep Sea",
       "version": "1.0.0",
       "author": "Redfire3248",
-      "description": "Five colour themes: Deep Sea, Ember and Forest Night (dark), Paper and Glacier (light), easy to read all day.",
+      "description": "Dark and calm, deep blues with teal. A colour theme for all of Aether and your code.",
       "icon": "palette",
       "tags": [
         "themes",
-        "colours"
+        "dark"
       ],
-      "aether": ">=1.9.22",
+      "colors": [
+        "#0b1622",
+        "#3fc1c9",
+        "#c792ea",
+        "#a5e075",
+        "#82aaff"
+      ],
+      "aether": ">=1.9.25",
       "files": [
         "README.md",
         "extension.json",
         "main.js"
       ],
-      "size": 4563
+      "size": 1660
+    },
+    {
+      "id": "theme-ember",
+      "name": "Ember",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Dark and warm, browns with a glowing orange. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "colors": [
+        "#17110f",
+        "#ff8a4c",
+        "#ff8a4c",
+        "#c3d977",
+        "#ffd479"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1657
+    },
+    {
+      "id": "theme-forest-night",
+      "name": "Forest Night",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Dark and quiet, deep greens with mint. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "colors": [
+        "#0e1512",
+        "#5fd39a",
+        "#7fdbb6",
+        "#d7e28a",
+        "#9fd3ff"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1702
+    },
+    {
+      "id": "theme-glacier",
+      "name": "Glacier",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Light and cool, crisp blues and greys. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "light"
+      ],
+      "colors": [
+        "#eef3f8",
+        "#2563c9",
+        "#7a3fc4",
+        "#1e7b45",
+        "#2563c9"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1659
+    },
+    {
+      "id": "theme-mint-cream",
+      "name": "Mint Cream",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Light and fresh, soft greens. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "light"
+      ],
+      "colors": [
+        "#eef6f1",
+        "#0c6e52",
+        "#7a3fa6",
+        "#1e7b45",
+        "#1f62b8"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1659
+    },
+    {
+      "id": "theme-neon-tide",
+      "name": "Neon Tide",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Dark and bright, glowing teal and pink. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "colors": [
+        "#07101c",
+        "#22e0d0",
+        "#ff5fb0",
+        "#7dffb2",
+        "#5cc8ff"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1678
+    },
+    {
+      "id": "theme-paper",
+      "name": "Paper",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Light and warm, like a page in a book. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "light"
+      ],
+      "colors": [
+        "#f4efe6",
+        "#a84a22",
+        "#a3366d",
+        "#45701b",
+        "#1f5f99"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1641
+    },
+    {
+      "id": "theme-plum-dusk",
+      "name": "Plum Dusk",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Dark and soft, deep purples with pink. A colour theme for all of Aether and your code.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "dark"
+      ],
+      "colors": [
+        "#171120",
+        "#d18cf0",
+        "#d18cf0",
+        "#b5e28a",
+        "#8fb8ff"
+      ],
+      "aether": ">=1.9.25",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1675
     },
     {
       "id": "word-count",

@@ -34,7 +34,7 @@ for (const id of fs.readdirSync(EXT).sort()) {
     try { new Function(code); } catch (e) { bad(`${f}: ${e.message}`); }
     if (/\beval\s*\(|new Function\s*\(|require\s*\(\s*['"]child_process/.test(code)) bad(`${f}: eval, new Function and child_process are not allowed (use aether.shell.exec)`);
   }
-  out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', tags: man.tags || [], aether: man.aether || '', files, size });
+  out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', tags: man.tags || [], colors: man.colors || undefined, aether: man.aether || '', files, size });
 }
 
 if (problems.length) { console.error('Problems:\n- ' + problems.join('\n- ')); process.exit(1); }

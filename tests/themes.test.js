@@ -2,8 +2,12 @@ const test = require('node:test');
 const assert = require('node:assert');
 const { load } = require('./fake-aether');
 
-const ext = load('theme-pack');
-const themes = ext.did.themes;
+const fs = require('fs');
+const path = require('path');
+
+// every theme is an extension of its own, extensions/theme-<name>
+const ids = fs.readdirSync(path.join(__dirname, '..', 'extensions')).filter((d) => d.startsWith('theme-'));
+const themes = ids.flatMap((id) => load(id).did.themes);
 
 // WCAG contrast between two colours (#abc, #aabbcc or aabbcc)
 function lum(hex) {
@@ -17,11 +21,11 @@ const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - 
 const UI = ['bg', 'panel', 'editor', 'elevated', 'hover', 'border', 'text', 'muted', 'faint', 'accent', 'accent2', 'accentText', 'danger', 'warn', 'ok'];
 const SYNTAX = ['keyword', 'string', 'number', 'comment', 'fn', 'type', 'variable', 'operator', 'tag', 'attr', 'regexp', 'constant'];
 
-test('five themes, dark and light, with ids of their own', () => {
-  assert.strictEqual(themes.length, 5);
+test('each theme is one extension, dark and light ones, with ids of their own', () => {
+  assert.strictEqual(themes.length, ids.length);
   assert.ok(themes.some((t) => t.dark) && themes.some((t) => !t.dark));
-  assert.strictEqual(new Set(themes.map((t) => t.id)).size, 5);
-  for (const t of themes) assert.match(t.id, /^theme-pack-[a-z-]+$/);
+  assert.strictEqual(new Set(themes.map((t) => t.id)).size, ids.length);
+  for (const t of themes) assert.ok(ids.includes(t.id), t.id);
 });
 
 test('every colour is given, written the way Aether wants', () => {

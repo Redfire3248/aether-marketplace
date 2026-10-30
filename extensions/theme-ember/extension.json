@@ -1,0 +1,21 @@
+{
+  "id": "theme-ember",
+  "name": "Ember",
+  "version": "1.0.0",
+  "description": "Dark and warm, browns with a glowing orange. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "colors": [
+    "#17110f",
+    "#ff8a4c",
+    "#ff8a4c",
+    "#c3d977",
+    "#ffd479"
+  ],
+  "aether": ">=1.9.25"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "theme-forest-night",
+  "name": "Forest Night",
+  "version": "1.0.0",
+  "description": "Dark and quiet, deep greens with mint. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "colors": [
+    "#0e1512",
+    "#5fd39a",
+    "#7fdbb6",
+    "#d7e28a",
+    "#9fd3ff"
+  ],
+  "aether": ">=1.9.25"
+}

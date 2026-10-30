@@ -1,0 +1,21 @@
+{
+  "id": "theme-deep-sea",
+  "name": "Deep Sea",
+  "version": "1.0.0",
+  "description": "Dark and calm, deep blues with teal. A colour theme for all of Aether and your code.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "dark"
+  ],
+  "colors": [
+    "#0b1622",
+    "#3fc1c9",
+    "#c792ea",
+    "#a5e075",
+    "#82aaff"
+  ],
+  "aether": ">=1.9.25"
+}
