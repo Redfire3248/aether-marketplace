@@ -9,7 +9,7 @@ const cleanFlags = (flags) => [...new Set(String(flags).replace(/[^gimsuy]/g, ''
 
 // the regular expression, or the reason it is not one
 function compile(pattern, flags, extra = '') {
-  try { return { ok: true, re: new RegExp(pattern, cleanFlags(flags) + extra) }; } catch (e) { return { ok: false, error: e.message.replace(/^Invalid regular expression: /, '') }; }
+  try { return { ok: true, re: new RegExp(pattern, cleanFlags(flags) + extra) }; } catch (e) { return { ok: false, error: e.message.replace(/^Invalid regular expression: (\/[\s\S]*\/[a-z]*: )?/, '') }; }
 }
 
 // every match: { index, end, text, groups: [{ n, name, value, start, end }] }. Without g, only the first.

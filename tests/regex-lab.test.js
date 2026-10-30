@@ -41,7 +41,7 @@ test('stops at the most it shows', () => {
 test('says what is wrong with a pattern', () => {
   const r = fn.runRegex('(a', 'g', 'aaa');
   assert.strictEqual(r.ok, false);
-  assert.match(r.error, /group/i);
+  assert.strictEqual(r.error, 'Unterminated group');
 });
 
 test('highlights matches and escapes the rest', () => {
