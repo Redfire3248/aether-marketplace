@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-glacier',
   name: 'Glacier',
   dark: false,
+  pack: 'Light',
   ui: {
     bg: '#eef3f8',
     panel: '#e4ebf2',

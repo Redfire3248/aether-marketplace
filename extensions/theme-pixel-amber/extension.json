@@ -1,7 +1,7 @@
 {
   "id": "theme-pixel-amber",
   "name": "Pixel Amber",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An old amber monitor: warm glowing orange on black.",
   "author": "Redfire3248",
   "main": "main.js",

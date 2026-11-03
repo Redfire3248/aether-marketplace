@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-pixel-cherry',
   name: 'Pixel Cherry',
   dark: true,
+  pack: 'Pixel',
   style: 'pixel',
   ui: {
     bg: '#1d0b12',

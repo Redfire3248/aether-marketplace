@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-cyber-noir',
   name: 'Cyber Noir',
   dark: true,
+  pack: 'Neon',
   ui: {
     bg: '#0a0a0c',
     panel: '#111114',

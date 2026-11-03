@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-plum-dusk',
   name: 'Plum Dusk',
   dark: true,
+  pack: 'Neon',
   ui: {
     bg: '#171120',
     panel: '#1d1629',

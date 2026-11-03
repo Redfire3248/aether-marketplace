@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-blood-moon',
   name: 'Blood Moon',
   dark: true,
+  pack: 'Nature',
   ui: {
     bg: '#120809',
     panel: '#1a0c0e',

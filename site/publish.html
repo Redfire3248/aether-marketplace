@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share an extension - Aether Marketplace</title>
+  <meta name="description" content="Share your Aether extension with everyone: its code, its page, an icon and screenshots.">
+  <meta name="theme-color" content="#0b0e1a">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+  <script src="themes.js"></script>
+  <script src="site.js" defer></script>
+  <script src="md.js" defer></script>
+  <script type="module" src="publish.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the page</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="https://redfire3248.github.io/aether-download/"><img src="logo.png" alt="" width="28" height="28"><span>Aether</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="docs.html">Docs</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a class="nav-get" href="https://redfire3248.github.io/aether-download/#get">Get Aether</a>
+      </nav>
+      <div class="theme-pick">
+        <button class="theme-btn" id="theme-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" title="Change the theme">
+          <i class="theme-dot"></i><span>Theme</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="group" aria-label="Themes" hidden></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap pub" id="main">
+    <div class="page-head">
+      <h1>Share an extension</h1>
+      <p>Put your extension in the Aether Marketplace, so anyone can install it from inside Aether. Give it a page, an icon and screenshots. Only you can change or remove it. New to making one? Read <a href="docs.html#api">Making extensions</a>.</p>
+    </div>
+
+    <p class="pub-msg" id="msg" role="status" aria-live="polite" hidden></p>
+
+    <!-- not signed in -->
+    <section class="pub-card pub-signin" id="signin" hidden>
+      <h2>Sign in to share</h2>
+      <p class="muted">An Aether account keeps your extensions yours: only you can change them.</p>
+      <button class="btn google" type="button" id="google"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9h-4v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.4 14.4a7.2 7.2 0 0 1 0-4.7V6.6h-4a12 12 0 0 0 0 10.9z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.4 6.6l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></svg>Continue with Google</button>
+      <div class="or"><span>or with your email</span></div>
+      <form class="pub-form" id="email-form" novalidate>
+        <label class="field" id="name-row" hidden><span>Your name, as people will see it</span><input id="su-name" type="text" maxlength="40" autocomplete="name"></label>
+        <label class="field"><span>Email</span><input id="su-email" type="email" required autocomplete="email"></label>
+        <label class="field"><span>Password</span><input id="su-pass" type="password" required minlength="8" autocomplete="current-password"></label>
+        <div class="row">
+          <button class="btn primary" type="submit" id="email-go">Sign in</button>
+          <button class="btn" type="button" id="switch">Make an account instead</button>
+          <button class="linkish" type="button" id="forgot">Forgot the password?</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- signed in with an email that is not checked yet -->
+    <section class="pub-card" id="verify" hidden>
+      <h2>Check your email</h2>
+      <p>We sent a link to <b id="verify-email"></b>. Open it, then come back and press <b>Done</b>.</p>
+      <div class="row"><button class="btn primary" type="button" id="verified">Done</button><button class="btn" type="button" id="resend">Send it again</button><button class="linkish" type="button" data-out>Sign out</button></div>
+    </section>
+
+    <!-- signed in -->
+    <section id="studio" hidden>
+      <div class="pub-who"><span>Signed in as <b id="who"></b></span><button class="linkish" type="button" data-out>Sign out</button></div>
+      <div class="pub-head"><h2>Your extensions</h2><button class="btn primary" type="button" id="new">Share a new one</button></div>
+      <div class="pub-mine" id="mine"><p class="muted">Loading...</p></div>
+
+      <form class="pub-card pub-form" id="form" novalidate hidden>
+        <h2 id="form-title">Share a new extension</h2>
+        <div class="pick-folder">
+          <button class="btn" type="button" id="folder-btn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Pick its folder</button>
+          <p class="muted small">Its folder in Aether (Extensions &gt; Your extensions &gt; Open folder): extension.json, main.js and README.md fill in the form, icon.png becomes the icon and the pictures in screenshots/ the screenshots.</p>
+          <input type="file" id="folder" webkitdirectory multiple hidden>
+        </div>
+
+        <div class="grid2">
+          <label class="field"><span>Name</span><input id="f-name" type="text" maxlength="40" required></label>
+          <label class="field"><span>Id <small>(its address: small letters, numbers and dashes)</small></span><input id="f-id" type="text" maxlength="40" pattern="[a-z0-9][a-z0-9-]{2,39}" required></label>
+        </div>
+        <label class="field"><span>What it does, in one line</span><input id="f-desc" type="text" maxlength="200" required></label>
+        <div class="grid3">
+          <label class="field"><span>Kind</span><span class="select"><select id="f-cat"><option>Tools</option><option>Code</option><option>Web</option><option>Writing</option><option>Themes</option><option>Pets</option></select></span></label>
+          <label class="field"><span>Version</span><input id="f-ver" type="text" maxlength="20" value="1.0.0" required></label>
+          <label class="field"><span>Shown as by</span><input id="f-by" type="text" maxlength="40" required></label>
+        </div>
+        <label class="field"><span>Words to find it by <small>(up to 8, with commas)</small></span><input id="f-tags" type="text" maxlength="160" placeholder="timer, focus"></label>
+
+        <div class="grid2 pics">
+          <div class="field"><span>Icon <small>(square, it is made 128 x 128)</small></span>
+            <div class="icon-pick"><span class="badge pic" id="icon-view"></span><div class="row"><button class="btn" type="button" id="icon-btn">Pick a picture</button><button class="linkish" type="button" id="icon-clear" hidden>Use none</button></div></div>
+            <input type="file" id="icon" accept="image/png,image/jpeg,image/webp" hidden>
+          </div>
+          <div class="field"><span>Code <small>(main.js)</small></span>
+            <div class="code-pick"><b id="code-name">No file yet</b><button class="btn" type="button" id="code-btn">Pick main.js</button></div>
+            <input type="file" id="code" accept=".js,text/javascript" hidden>
+          </div>
+        </div>
+
+        <div class="field"><span>Screenshots <small>(up to 6)</small></span>
+          <div class="shots-pick" id="shots-view"></div>
+          <div class="row"><button class="btn" type="button" id="shots-btn">Add pictures</button></div>
+          <input type="file" id="shots" accept="image/png,image/jpeg,image/webp" multiple hidden>
+        </div>
+
+        <div class="field"><span>Its page <small>(Markdown: headings, lists, <code>code</code>, links and pictures from the web)</small></span>
+          <div class="md-tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-tab="write">Write</button><button type="button" role="tab" aria-selected="false" data-tab="look">Look</button></div>
+          <textarea id="f-readme" rows="14" maxlength="100000" spellcheck="true"></textarea>
+          <div class="md md-look" id="readme-look" hidden></div>
+        </div>
+
+        <p class="muted small">It runs inside Aether for everyone who installs it, so it can read and change their files. Share only what you made, and nothing that harms people or their computers.</p>
+        <div class="row end"><button class="btn" type="button" id="cancel">Cancel</button><button class="btn primary" type="submit" id="save">Share it</button></div>
+      </form>
+    </section>
+  </main>
+
+  <div class="dialog-back" id="ask" hidden><div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="ask-text"><p id="ask-text"></p><div class="row end"><button class="btn" type="button" id="ask-no">Keep it</button><button class="btn danger" type="button" id="ask-yes">Remove</button></div></div></div>
+
+  <footer>
+    <div class="wrap">
+      <span>Aether, <span id="year">2026</span>. MIT license.</span>
+      <nav aria-label="More">
+        <a href="marketplace.html">Marketplace</a>
+        <a href="docs.html#api">Making extensions</a>
+        <a href="https://redfire3248.github.io/aether-download/">Get Aether</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

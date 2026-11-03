@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-neon-tide',
   name: 'Neon Tide',
   dark: true,
+  pack: 'Neon',
   ui: {
     bg: '#07101c',
     panel: '#0b1626',

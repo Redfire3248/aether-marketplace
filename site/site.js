@@ -56,5 +56,49 @@
 
   const size = (n) => (n < 1024 ? `${n} bytes` : n < 1024 * 1024 ? `${Math.round(n / 102.4) / 10} KB` : `${Math.round(n / 104857.6) / 10} MB`);
 
-  root.AetherSite = { REPO, icon, esc, loadIndex, size };
+  // ---- extensions people share themselves (publish.html): in the Firestore database, read through its public
+  // address, so reading needs no sign-in and no key. Everything that comes back is checked before it is shown.
+  const CLOUD = 'https://firestore.googleapis.com/v1/projects/aether-2c478/databases/(default)/documents/';
+  const ID = /^[a-z0-9][a-z0-9-]{2,39}$/, IMG = /^data:image\/(png|jpeg|webp);base64,[a-z0-9+/=]+$/i;
+  const CATS = ['Themes', 'Pets', 'Code', 'Web', 'Writing', 'Tools'];
+  const val = (v) => (!v ? null : 'stringValue' in v ? v.stringValue : 'integerValue' in v ? +v.integerValue : 'doubleValue' in v ? v.doubleValue
+    : 'booleanValue' in v ? v.booleanValue : 'timestampValue' in v ? v.timestampValue : 'arrayValue' in v ? (v.arrayValue.values || []).map(val) : null);
+  const fieldsOf = (doc) => Object.fromEntries(Object.entries((doc && doc.fields) || {}).map(([k, v]) => [k, val(v)]));
+  const str = (v, max) => String(v == null ? '' : v).slice(0, max);
+  function shared(f) {
+    if (!ID.test(f.id || '')) return null;
+    return {
+      id: f.id, name: str(f.name, 40) || f.id, description: str(f.description, 200), author: str(f.author, 40), version: /^\d+\.\d+\.\d+$/.test(f.version || '') ? f.version : '0.0.0',
+      category: CATS.includes(f.category) ? f.category : 'Tools', tags: Array.isArray(f.tags) ? f.tags.filter((t) => typeof t === 'string').map((t) => t.slice(0, 20)).slice(0, 8) : [],
+      picture: IMG.test(f.icon || '') ? f.icon : '', shots: Math.max(0, Math.min(6, f.shots | 0)), aether: str(f.aether, 20), size: f.size | 0, updated: f.updatedAt || f.createdAt || '', community: true
+    };
+  }
+  async function cloud(pathPart) {
+    const r = await fetch(CLOUD + pathPart, { cache: 'no-cache' });
+    if (r.status === 404) return null;
+    if (!r.ok) throw new Error('The shared extensions could not be loaded (' + r.status + ').');
+    return r.json();
+  }
+  const community = {
+    // every shared extension (a short card each: the big parts are only read on its own page)
+    async list() {
+      const out = [];
+      let token = '';
+      for (let page = 0; page < 10; page++) {
+        const j = await cloud('extensions?pageSize=300' + (token ? '&pageToken=' + encodeURIComponent(token) : ''));
+        for (const d of (j && j.documents) || []) { const x = shared(fieldsOf(d)); if (x) out.push(x); }
+        if (!j || !j.nextPageToken) break;
+        token = j.nextPageToken;
+      }
+      return out;
+    },
+    async get(id) { if (!ID.test(id)) return null; const d = await cloud('extensions/' + id); return d ? shared(fieldsOf(d)) : null; },
+    async file(id, name) { const d = await cloud(`extensions/${id}/files/${name}`); return d ? str(fieldsOf(d).text, 600000) : ''; },
+    async shot(id, n) { const d = await cloud(`extensions/${id}/shots/${n}`); const s = d && fieldsOf(d).data; return IMG.test(s || '') ? s : ''; }
+  };
+
+  // an extension's icon: its own picture when it has one, else one of Aether's icons
+  const badge = (x, base = '') => (x.picture ? `<img src="${esc(x.picture)}" alt="" width="64" height="64">` : x.image ? `<img src="${esc(base + 'extensions/' + x.id + '/' + x.image)}" alt="" width="64" height="64">` : icon(x.icon));
+
+  root.AetherSite = { REPO, icon, esc, loadIndex, size, community, badge };
 })(self);

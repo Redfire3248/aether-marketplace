@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-pixel-sunset',
   name: 'Pixel Sunset',
   dark: true,
+  pack: 'Pixel',
   style: 'pixel',
   ui: {
     bg: '#1c1030',

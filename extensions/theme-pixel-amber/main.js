@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-pixel-amber',
   name: 'Pixel Amber',
   dark: true,
+  pack: 'Pixel',
   style: 'pixel',
   ui: {
     bg: '#120c02',

@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-pixel-mint',
   name: 'Pixel Mint',
   dark: true,
+  pack: 'Pixel',
   style: 'pixel',
   ui: {
     bg: '#0b1f1e',

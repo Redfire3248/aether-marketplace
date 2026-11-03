@@ -291,7 +291,7 @@
     {
       "id": "theme-arctic-night",
       "name": "Arctic Night",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Cold and clear: midnight blue with icy light.",
       "icon": "palette",
@@ -321,12 +321,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1896
+      "size": 1914
     },
     {
       "id": "theme-blood-moon",
       "name": "Blood Moon",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Dark and dramatic: black-red with a burning crimson.",
       "icon": "palette",
@@ -356,12 +356,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1899
+      "size": 1917
     },
     {
       "id": "theme-cyber-noir",
       "name": "Cyber Noir",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Black and electric yellow, straight out of the future.",
       "icon": "palette",
@@ -391,12 +391,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1905
+      "size": 1921
     },
     {
       "id": "theme-deep-sea",
       "name": "Deep Sea",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Dark and calm, deep blues with teal.",
       "icon": "palette",
@@ -426,12 +426,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1881
+      "size": 1899
     },
     {
       "id": "theme-ember",
       "name": "Ember",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Dark and warm, browns with a glowing orange.",
       "icon": "palette",
@@ -461,12 +461,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1878
+      "size": 1896
     },
     {
       "id": "theme-forest-night",
       "name": "Forest Night",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Dark and quiet, deep greens with mint.",
       "icon": "palette",
@@ -496,12 +496,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1923
+      "size": 1941
     },
     {
       "id": "theme-glacier",
       "name": "Glacier",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Light and cool, crisp blues and greys.",
       "icon": "palette",
@@ -531,12 +531,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1880
+      "size": 1897
     },
     {
       "id": "theme-lavender-mist",
       "name": "Lavender Mist",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Light and soft: pale purple with deep violet ink.",
       "icon": "palette",
@@ -566,12 +566,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1919
+      "size": 1936
     },
     {
       "id": "theme-matcha",
       "name": "Matcha",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Calm and light: creamy green tea with deep leaf green.",
       "icon": "palette",
@@ -601,12 +601,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1871
+      "size": 1888
     },
     {
       "id": "theme-mint-cream",
       "name": "Mint Cream",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Light and fresh, soft greens.",
       "icon": "palette",
@@ -636,12 +636,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1880
+      "size": 1897
     },
     {
       "id": "theme-neon-tide",
       "name": "Neon Tide",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Dark and bright, glowing teal and pink.",
       "icon": "palette",
@@ -671,12 +671,158 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1899
+      "size": 1915
+    },
+    {
+      "id": "theme-pack-light",
+      "name": "Light Theme Pack",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Five calm light themes in one: Glacier, Lavender Mist, Matcha, Mint Cream and Paper.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "pack",
+        "light"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#eef3f8",
+        "panel": "#e4ebf2",
+        "editor": "#f8fbfe",
+        "border": "#c8d5e3",
+        "text": "#1d2733",
+        "muted": "#4f5e70",
+        "accent": "#2563c9",
+        "accentText": "#ffffff",
+        "keyword": "#7a3fc4",
+        "string": "#1e7b45",
+        "fn": "#2563c9",
+        "number": "#b04a09",
+        "comment": "#627183"
+      },
+      "aether": ">=1.9.28",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 5835
+    },
+    {
+      "id": "theme-pack-nature",
+      "name": "Nature Theme Pack",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Five dark themes from the outdoors in one: Forest Night, Deep Sea, Arctic Night, Ember and Blood Moon.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "pack",
+        "dark"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#0e1512",
+        "panel": "#121c17",
+        "editor": "#101914",
+        "border": "#26392f",
+        "text": "#dfeee4",
+        "muted": "#97b3a2",
+        "accent": "#5fd39a",
+        "accentText": "#04140c",
+        "keyword": "#7fdbb6",
+        "string": "#d7e28a",
+        "fn": "#9fd3ff",
+        "number": "#f2a65a",
+        "comment": "#76937f"
+      },
+      "aether": ">=1.9.28",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 5909
+    },
+    {
+      "id": "theme-pack-neon",
+      "name": "Neon Theme Pack",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Four bright night themes in one: Neon Tide, Cyber Noir, Tokyo Rain and Plum Dusk.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "pack",
+        "dark"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#07101c",
+        "panel": "#0b1626",
+        "editor": "#091320",
+        "border": "#1f3857",
+        "text": "#e6f4ff",
+        "muted": "#8fb0c9",
+        "accent": "#22e0d0",
+        "accentText": "#03201e",
+        "keyword": "#ff5fb0",
+        "string": "#7dffb2",
+        "fn": "#5cc8ff",
+        "number": "#ffb454",
+        "comment": "#6f93ad"
+      },
+      "aether": ">=1.9.28",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 4999
+    },
+    {
+      "id": "theme-pack-pixel",
+      "name": "Pixel Theme Pack",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Six square-pixel themes in one: Amber, Cherry, Mint, Paper, Sunset and Vapor.",
+      "icon": "palette",
+      "tags": [
+        "themes",
+        "pack",
+        "pixel",
+        "dark",
+        "light"
+      ],
+      "category": "Themes",
+      "preview": {
+        "bg": "#120c02",
+        "panel": "#1a1205",
+        "editor": "#150f03",
+        "border": "#4a3814",
+        "text": "#ffe6b0",
+        "muted": "#c9a86b",
+        "accent": "#ffb000",
+        "accentText": "#1f1400",
+        "keyword": "#ffb000",
+        "string": "#ffd98a",
+        "fn": "#ffe0a0",
+        "number": "#ffc94d",
+        "comment": "#a58a58"
+      },
+      "aether": ">=1.9.28",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 6925
     },
     {
       "id": "theme-paper",
       "name": "Paper",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Light and warm, like a page in a book.",
       "icon": "palette",
@@ -706,12 +852,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1862
+      "size": 1879
     },
     {
       "id": "theme-pixel-amber",
       "name": "Pixel Amber",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "An old amber monitor: warm glowing orange on black.",
       "icon": "palette",
@@ -742,12 +888,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1972
+      "size": 1989
     },
     {
       "id": "theme-pixel-cherry",
       "name": "Pixel Cherry",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Square pixels with a bite: dark red with cherry pink.",
       "icon": "palette",
@@ -778,12 +924,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1987
+      "size": 2004
     },
     {
       "id": "theme-pixel-mint",
       "name": "Pixel Mint",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Square pixels, cool and clean: deep teal with bright mint.",
       "icon": "palette",
@@ -814,12 +960,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1984
+      "size": 2001
     },
     {
       "id": "theme-pixel-paper",
       "name": "Pixel Paper",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Square pixels on a light page: cream with bold ink.",
       "icon": "palette",
@@ -850,12 +996,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1974
+      "size": 1991
     },
     {
       "id": "theme-pixel-sunset",
       "name": "Pixel Sunset",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Square pixels at dusk: deep purple with orange and pink.",
       "icon": "palette",
@@ -886,12 +1032,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1996
+      "size": 2013
     },
     {
       "id": "theme-pixel-vapor",
       "name": "Pixel Vapor",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Square pixels, loud and pink: hot pink and cyan on indigo.",
       "icon": "palette",
@@ -922,12 +1068,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1993
+      "size": 2010
     },
     {
       "id": "theme-plum-dusk",
       "name": "Plum Dusk",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Dark and soft, deep purples with pink.",
       "icon": "palette",
@@ -957,12 +1103,12 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1896
+      "size": 1912
     },
     {
       "id": "theme-tokyo-rain",
       "name": "Tokyo Rain",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "City lights in the rain: deep indigo with neon signs.",
       "icon": "palette",
@@ -992,7 +1138,7 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1902
+      "size": 1918
     },
     {
       "id": "word-count",

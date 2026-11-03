@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-forest-night',
   name: 'Forest Night',
   dark: true,
+  pack: 'Nature',
   ui: {
     bg: '#0e1512',
     panel: '#121c17',

@@ -1,0 +1,237 @@
+// Pixel Theme Pack: 6 colour themes for Aether in one install. They are Amber, Cherry, Mint, Paper, Sunset and Vapor.
+// They go in the Pixel pack in Settings > Theme and in the theme picker (Ctrl+Alt+T). Each one is also in the
+// Marketplace on its own, with the same id, so having both installed shows each theme once.
+
+const THEMES = [
+  {
+    id: 'theme-pixel-amber',
+    name: 'Pixel Amber',
+    dark: true,
+    pack: 'Pixel',
+    style: 'pixel',
+    ui: {
+      bg: '#120c02',
+      panel: '#1a1205',
+      editor: '#150f03',
+      elevated: '#241a08',
+      hover: '#2e220c',
+      border: '#4a3814',
+      text: '#ffe6b0',
+      muted: '#c9a86b',
+      faint: '#9a7d48',
+      accent: '#ffb000',
+      accent2: '#ffd466',
+      accentText: '#1f1400',
+      danger: '#ff7a7a',
+      warn: '#ffcb6b',
+      ok: '#6fe0a0'
+    },
+    syntax: {
+      keyword: 'ffb000',
+      string: 'ffd98a',
+      number: 'ffc94d',
+      comment: 'a58a58',
+      fn: 'ffe0a0',
+      type: 'f5c25c',
+      variable: 'ffe6b0',
+      operator: 'e6c88a',
+      tag: 'ff9f4d',
+      attr: 'f5c25c',
+      regexp: 'ffd98a',
+      constant: 'ffc94d'
+    }
+  },
+  {
+    id: 'theme-pixel-cherry',
+    name: 'Pixel Cherry',
+    dark: true,
+    pack: 'Pixel',
+    style: 'pixel',
+    ui: {
+      bg: '#1d0b12',
+      panel: '#27101a',
+      editor: '#220d16',
+      elevated: '#341624',
+      hover: '#3f1c2c',
+      border: '#5a2a3f',
+      text: '#ffeaf0',
+      muted: '#cda0b0',
+      faint: '#a07686',
+      accent: '#ff5c8a',
+      accent2: '#ffb44d',
+      accentText: '#2a0612',
+      danger: '#ff7a7a',
+      warn: '#ffcb6b',
+      ok: '#6fe0a0'
+    },
+    syntax: {
+      keyword: 'ff5c8a',
+      string: 'ffd479',
+      number: 'ffa45c',
+      comment: 'a97f90',
+      fn: 'ff9ecb',
+      type: 'ffcf70',
+      variable: 'ffeaf0',
+      operator: 'f0b6c8',
+      tag: 'ff8a8a',
+      attr: 'ffcf70',
+      regexp: 'ffd479',
+      constant: 'ffa45c'
+    }
+  },
+  {
+    id: 'theme-pixel-mint',
+    name: 'Pixel Mint',
+    dark: true,
+    pack: 'Pixel',
+    style: 'pixel',
+    ui: {
+      bg: '#0b1f1e',
+      panel: '#102826',
+      editor: '#0d2322',
+      elevated: '#163431',
+      hover: '#1c3f3b',
+      border: '#2a5a54',
+      text: '#e6fff8',
+      muted: '#94c7bb',
+      faint: '#6a9c90',
+      accent: '#5cf2c0',
+      accent2: '#7fd0ff',
+      accentText: '#06241c',
+      danger: '#ff7a7a',
+      warn: '#ffcb6b',
+      ok: '#6fe0a0'
+    },
+    syntax: {
+      keyword: '5cf2c0',
+      string: 'c5f277',
+      number: 'ffb86b',
+      comment: '739f94',
+      fn: '7fd0ff',
+      type: 'ffd97a',
+      variable: 'e6fff8',
+      operator: 'a5e8d8',
+      tag: 'ff94a8',
+      attr: 'ffd97a',
+      regexp: 'c5f277',
+      constant: 'ffb86b'
+    }
+  },
+  {
+    id: 'theme-pixel-paper',
+    name: 'Pixel Paper',
+    dark: false,
+    pack: 'Pixel',
+    style: 'pixel',
+    ui: {
+      bg: '#f3ead8',
+      panel: '#e9dec8',
+      editor: '#f9f2e4',
+      elevated: '#ffffff',
+      hover: '#ddd0b6',
+      border: '#b5a586',
+      text: '#221c12',
+      muted: '#5c5240',
+      faint: '#7d7158',
+      accent: '#a8360f',
+      accent2: '#1b5e8c',
+      accentText: '#ffffff',
+      danger: '#a81e2a',
+      warn: '#7a5200',
+      ok: '#1c6e3f'
+    },
+    syntax: {
+      keyword: 'a8360f',
+      string: '2f6b1f',
+      number: '96500a',
+      comment: '6e6450',
+      fn: '1b5e8c',
+      type: '7a4b00',
+      variable: '221c12',
+      operator: '4d4536',
+      tag: 'a3214f',
+      attr: '7a4b00',
+      regexp: '2f6b1f',
+      constant: '96500a'
+    }
+  },
+  {
+    id: 'theme-pixel-sunset',
+    name: 'Pixel Sunset',
+    dark: true,
+    pack: 'Pixel',
+    style: 'pixel',
+    ui: {
+      bg: '#1c1030',
+      panel: '#241538',
+      editor: '#20122f',
+      elevated: '#2e1c46',
+      hover: '#382354',
+      border: '#4d3270',
+      text: '#f8ecff',
+      muted: '#b9a6d4',
+      faint: '#8d78ad',
+      accent: '#ff9d4d',
+      accent2: '#ff6fa8',
+      accentText: '#26120a',
+      danger: '#ff7a7a',
+      warn: '#ffcb6b',
+      ok: '#6fe0a0'
+    },
+    syntax: {
+      keyword: 'ff9d4d',
+      string: 'ffe08a',
+      number: 'ff6fa8',
+      comment: '9c88bd',
+      fn: '7fd4ff',
+      type: 'ffd166',
+      variable: 'f8ecff',
+      operator: 'c9b3ff',
+      tag: 'ff7f7f',
+      attr: 'ffd166',
+      regexp: 'ffe08a',
+      constant: 'ff6fa8'
+    }
+  },
+  {
+    id: 'theme-pixel-vapor',
+    name: 'Pixel Vapor',
+    dark: true,
+    pack: 'Pixel',
+    style: 'pixel',
+    ui: {
+      bg: '#130f2e',
+      panel: '#1a1540',
+      editor: '#161138',
+      elevated: '#231d52',
+      hover: '#2c2563',
+      border: '#443a8a',
+      text: '#f4f0ff',
+      muted: '#b3a9e0',
+      faint: '#8a80bd',
+      accent: '#ff71ce',
+      accent2: '#01cdfe',
+      accentText: '#2a0520',
+      danger: '#ff7a7a',
+      warn: '#ffcb6b',
+      ok: '#6fe0a0'
+    },
+    syntax: {
+      keyword: 'ff71ce',
+      string: '05ffa1',
+      number: 'fffb96',
+      comment: '9288c4',
+      fn: '01cdfe',
+      type: 'b967ff',
+      variable: 'f4f0ff',
+      operator: 'a8d8ff',
+      tag: 'ff8fa8',
+      attr: 'b967ff',
+      regexp: '05ffa1',
+      constant: 'fffb96'
+    }
+  }
+];
+
+for (const theme of THEMES) aether.themes.add(theme);
+aether.commands.register('pick', 'Theme: Pick a Theme (the Pixel Theme Pack is there now)', () => aether.commands.run('view.theme'), { category: 'Pixel Theme Pack' });

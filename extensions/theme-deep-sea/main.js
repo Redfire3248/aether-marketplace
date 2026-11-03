@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-deep-sea',
   name: 'Deep Sea',
   dark: true,
+  pack: 'Nature',
   ui: {
     bg: '#0b1622',
     panel: '#0f1d2b',

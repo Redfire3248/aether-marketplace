@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-matcha',
   name: 'Matcha',
   dark: false,
+  pack: 'Light',
   ui: {
     bg: '#eef0e0',
     panel: '#e3e7d2',

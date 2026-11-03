@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-tokyo-rain',
   name: 'Tokyo Rain',
   dark: true,
+  pack: 'Neon',
   ui: {
     bg: '#10111f',
     panel: '#15172a',

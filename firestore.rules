@@ -1,0 +1,59 @@
+rules_version = '2';
+// The Aether Marketplace's shared extensions (site/publish.html). Paste this into Firebase > Firestore > Rules.
+// Anyone can read. Only someone signed in with a checked email can share; only the one who shared an extension can
+// change or remove it. Every field is checked, so nothing else can be stored.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null && request.auth.token.email_verified == true; }
+    function ext(id) { return /databases/$(database)/documents/extensions/$(id); }
+    // the one who shared it: before this write, and after it (for the parts saved right after the card)
+    function owns(id) { return signedIn() && exists(ext(id)) && get(ext(id)).data.ownerUid == request.auth.uid; }
+    function ownsAfter(id) { return signedIn() && getAfter(ext(id)).data.ownerUid == request.auth.uid; }
+    function text(v, most) { return v is string && v.size() <= most; }
+
+    // its card: what the Marketplace lists
+    function goodCard(d, id) {
+      return d.keys().hasOnly(['id', 'name', 'description', 'category', 'tags', 'version', 'author', 'ownerUid', 'icon', 'shots', 'aether', 'size', 'createdAt', 'updatedAt'])
+        && d.keys().hasAll(['id', 'name', 'description', 'category', 'tags', 'version', 'author', 'ownerUid', 'icon', 'shots', 'aether', 'size', 'createdAt', 'updatedAt'])
+        && d.id == id && id.matches('^[a-z0-9][a-z0-9-]{2,39}$')
+        && text(d.name, 40) && d.name.size() > 0
+        && text(d.description, 200) && d.description.size() > 0
+        && d.category in ['Themes', 'Pets', 'Code', 'Web', 'Writing', 'Tools']
+        && d.tags is list && d.tags.size() <= 8
+        && text(d.version, 20) && d.version.matches('^[0-9]+[.][0-9]+[.][0-9]+$')
+        && text(d.author, 40) && d.author.size() > 0
+        && d.ownerUid == request.auth.uid
+        && text(d.icon, 60000) && (d.icon == '' || d.icon.matches('^data:image/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$'))
+        && d.shots is int && d.shots >= 0 && d.shots <= 6
+        && text(d.aether, 20)
+        && d.size is int && d.size >= 0 && d.size <= 6000000
+        && d.updatedAt == request.time;
+    }
+
+    match /extensions/{id} {
+      allow read: if true;
+      allow create: if signedIn() && goodCard(request.resource.data, id) && request.resource.data.createdAt == request.time;
+      allow update: if signedIn() && resource.data.ownerUid == request.auth.uid && goodCard(request.resource.data, id) && request.resource.data.createdAt == resource.data.createdAt;
+      allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
+
+      // its code (main) and its page (readme)
+      match /files/{name} {
+        allow read: if true;
+        allow create, update: if ownsAfter(id) && request.resource.data.keys().hasOnly(['text']) && request.resource.data.text is string
+          && ((name == 'main' && request.resource.data.text.size() <= 300000) || (name == 'readme' && request.resource.data.text.size() <= 100000));
+        allow delete: if owns(id);
+      }
+
+      // its screenshots, 0 to 5 (the pages only ever show one as a picture: see community.shot in site/site.js)
+      match /shots/{n} {
+        allow read: if true;
+        allow create, update: if ownsAfter(id) && n in ['0', '1', '2', '3', '4', '5'] && request.resource.data.keys().hasOnly(['data'])
+          && text(request.resource.data.data, 900000);
+        allow delete: if owns(id);
+      }
+    }
+
+    // nothing else
+    match /{document=**} { allow read, write: if false; }
+  }
+}

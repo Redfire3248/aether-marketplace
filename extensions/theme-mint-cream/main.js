@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-mint-cream',
   name: 'Mint Cream',
   dark: false,
+  pack: 'Light',
   ui: {
     bg: '#eef6f1',
     panel: '#e3efe8',

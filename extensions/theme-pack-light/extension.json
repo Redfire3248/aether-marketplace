@@ -1,0 +1,31 @@
+{
+  "id": "theme-pack-light",
+  "name": "Light Theme Pack",
+  "version": "1.0.0",
+  "description": "Five calm light themes in one: Glacier, Lavender Mist, Matcha, Mint Cream and Paper.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "palette",
+  "tags": [
+    "themes",
+    "pack",
+    "light"
+  ],
+  "category": "Themes",
+  "preview": {
+    "bg": "#eef3f8",
+    "panel": "#e4ebf2",
+    "editor": "#f8fbfe",
+    "border": "#c8d5e3",
+    "text": "#1d2733",
+    "muted": "#4f5e70",
+    "accent": "#2563c9",
+    "accentText": "#ffffff",
+    "keyword": "#7a3fc4",
+    "string": "#1e7b45",
+    "fn": "#2563c9",
+    "number": "#b04a09",
+    "comment": "#627183"
+  },
+  "aether": ">=1.9.28"
+}

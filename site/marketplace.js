@@ -2,7 +2,7 @@
 // filtered list can be shared).
 (function () {
   'use strict';
-  const { icon, esc, loadIndex } = self.AetherSite;
+  const { esc, loadIndex, community, badge } = self.AetherSite;
   const $ = (id) => document.getElementById(id);
 
   document.addEventListener('DOMContentLoaded', async () => {
@@ -11,8 +11,8 @@
     let cat = params.get('cat') || '';
     q.value = params.get('q') || '';
 
-    let all;
-    try { all = (await loadIndex()).extensions; } catch (e) {
+    let all, base = '';
+    try { const idx = await loadIndex(); all = idx.extensions; base = idx.base; } catch (e) {
       list.innerHTML = `<p class="notice">${esc(e.message)} Try again in a moment, or see them <a href="${self.AetherSite.REPO}/tree/main/extensions">on GitHub</a>.</p>`;
       return;
     }
@@ -20,6 +20,7 @@
 
     const CATS = ['Themes', 'Pets', 'Code', 'Web', 'Writing', 'Tools'];
     const inCat = (c) => all.filter((x) => x.category === c).length;
+    const link = (x) => `extension.html?id=${encodeURIComponent(x.id)}${x.community ? '&amp;shared=1' : ''}`;
     if (cat && !CATS.includes(cat)) cat = '';
 
     const words = (s) => s.toLowerCase().split(/\s+/).filter(Boolean);
@@ -28,9 +29,10 @@
       return ws.every((w) => hay.includes(w));
     };
 
-    tagsEl.innerHTML = '<i class="cat-pill"></i>' + [['', 'All', all.length], ...CATS.map((c) => [c, c, inCat(c)])]
+    const tabs = () => '<i class="cat-pill"></i>' + [['', 'All', all.length], ...CATS.map((c) => [c, c, inCat(c)])]
       .map(([value, label, n]) => `<button class="cat" type="button" role="tab" data-cat="${esc(value)}">${esc(label)} <span class="count">${n}</span></button>`).join('');
-    const pill = tagsEl.querySelector('.cat-pill');
+    tagsEl.innerHTML = tabs();
+    let pill = tagsEl.querySelector('.cat-pill');
     function drawTags() {
       for (const b of tagsEl.querySelectorAll('.cat')) {
         const on = b.dataset.cat === cat; b.setAttribute('aria-selected', on);
@@ -43,7 +45,7 @@
     function themeCard(x, i) {
       const p = x.preview, v = Object.entries(p).map(([k, c]) => `--t-${k}:${safe(c)}`).join(';');
       return `
-        <a class="card ext theme-card${(x.tags || []).includes('pixel') ? ' pixel' : ''}${(x.tags || []).includes('light') ? ' light' : ''}" style="${v};--i:${i}" href="extension.html?id=${encodeURIComponent(x.id)}">
+        <a class="card ext theme-card${(x.tags || []).includes('pixel') ? ' pixel' : ''}${(x.tags || []).includes('light') ? ' light' : ''}" style="${v};--i:${i}" href="${link(x)}">
           <h3>${esc(x.name)}</h3>
           <p>${esc(x.description)}</p>
           <div class="t-foot"><span class="t-btn">${(x.tags || []).includes('pixel') ? 'Pixel' : (x.tags || []).includes('light') ? 'Light' : 'Dark'}</span><span class="by">v${esc(x.version)}</span></div>
@@ -54,10 +56,10 @@
       const shown = all.filter((x) => (!cat || x.category === cat) && matches(x, ws));
       count.textContent = shown.length === all.length ? `${all.length} extensions` : `${shown.length} of ${all.length} extensions`;
       list.innerHTML = shown.length ? shown.map((x, i) => (x.preview ? themeCard(x, i) : `
-        <a class="card ext" style="--i:${i}" href="extension.html?id=${encodeURIComponent(x.id)}">
+        <a class="card ext${x.community ? ' shared' : ''}" style="--i:${i}" href="${link(x)}">
           <div class="head">
-            <span class="badge">${icon(x.icon)}</span>
-            <div><h3>${esc(x.name)}</h3><div class="by">${esc(x.author)} · v${esc(x.version)}</div></div>
+            <span class="badge${x.picture || x.image ? ' pic' : ''}">${badge(x, base)}</span>
+            <div><h3>${esc(x.name)}</h3><div class="by">${esc(x.author)} · v${esc(x.version)}${x.community ? ' · <span class="shared-tag">Shared</span>' : ''}</div></div>
           </div>
           <p>${esc(x.description)}</p>
           <div class="tagrow">${(x.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
@@ -76,5 +78,16 @@
     });
     q.addEventListener('input', draw);
     drawTags(); draw();
+
+    // the extensions people shared themselves join the list when they arrive (the Marketplace's own win on a clash)
+    try {
+      const mine = new Set(all.map((x) => x.id));
+      const extra = (await community.list()).filter((x) => !mine.has(x.id));
+      if (extra.length) {
+        all = all.concat(extra).sort((a, b) => a.name.localeCompare(b.name));
+        tagsEl.innerHTML = tabs(); pill = tagsEl.querySelector('.cat-pill');
+        drawTags(); draw();
+      }
+    } catch { /* the Marketplace's own are there */ }
   });
 })();

@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-paper',
   name: 'Paper',
   dark: false,
+  pack: 'Light',
   ui: {
     bg: '#f4efe6',
     panel: '#ece5d8',

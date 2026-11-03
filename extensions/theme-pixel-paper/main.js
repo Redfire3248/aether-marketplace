@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-pixel-paper',
   name: 'Pixel Paper',
   dark: false,
+  pack: 'Pixel',
   style: 'pixel',
   ui: {
     bg: '#f3ead8',

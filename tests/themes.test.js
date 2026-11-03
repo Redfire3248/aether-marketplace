@@ -5,8 +5,10 @@ const { load } = require('./fake-aether');
 const fs = require('fs');
 const path = require('path');
 
-// every theme is an extension of its own, extensions/theme-<name>
-const ids = fs.readdirSync(path.join(__dirname, '..', 'extensions')).filter((d) => d.startsWith('theme-'));
+// every theme is an extension of its own, extensions/theme-<name>; theme packs (theme-pack-<name>) bundle some of them
+const all = fs.readdirSync(path.join(__dirname, '..', 'extensions'));
+const ids = all.filter((d) => d.startsWith('theme-') && !d.startsWith('theme-pack-'));
+const packs = all.filter((d) => d.startsWith('theme-pack-'));
 const themes = ids.flatMap((id) => load(id).did.themes);
 
 // WCAG contrast between two colours (#abc, #aabbcc or aabbcc)
@@ -26,6 +28,16 @@ test('each theme is one extension, dark and light ones, with ids of their own', 
   assert.ok(themes.some((t) => t.dark) && themes.some((t) => !t.dark));
   assert.strictEqual(new Set(themes.map((t) => t.id)).size, ids.length);
   for (const t of themes) assert.ok(ids.includes(t.id), t.id);
+});
+
+test('a theme pack holds exact copies of single themes, all in one pack', () => {
+  assert.ok(packs.length >= 4);
+  for (const p of packs) {
+    const got = load(p).did.themes;
+    assert.ok(got.length >= 3, p);
+    assert.strictEqual(new Set(got.map((t) => t.pack)).size, 1, p + ' puts every theme in one pack');
+    for (const t of got) assert.strictEqual(JSON.stringify(t), JSON.stringify(themes.find((x) => x.id === t.id)), p + ': ' + t.id + ' is the same as the single theme');
+  }
 });
 
 test('every colour is given, written the way Aether wants', () => {

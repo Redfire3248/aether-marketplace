@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-lavender-mist',
   name: 'Lavender Mist',
   dark: false,
+  pack: 'Light',
   ui: {
     bg: '#f1edf8',
     panel: '#e8e2f2',

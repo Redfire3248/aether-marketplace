@@ -36,7 +36,11 @@ for (const id of fs.readdirSync(EXT).sort()) {
     try { new Function(code); } catch (e) { bad(`${f}: ${e.message}`); }
     if (/\beval\s*\(|new Function\s*\(|require\s*\(\s*['"]child_process/.test(code)) bad(`${f}: eval, new Function and child_process are not allowed (use aether.shell.exec)`);
   }
-  out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', tags: man.tags || [], category: man.category, preview: man.preview || undefined, aether: man.aether || '', files, size });
+  // a picture for its icon (icon.png or icon.svg) and screenshots (screenshots/*.png), shown on its page
+  const image = ['icon.png', 'icon.svg'].find((f) => files.includes(f));
+  const screenshots = files.filter((f) => /^screenshots\/[\w-]+\.png$/.test(f));
+  if (screenshots.length > 6) bad('more than 6 screenshots');
+  out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', image, screenshots: screenshots.length ? screenshots : undefined, tags: man.tags || [], category: man.category, preview: man.preview || undefined, aether: man.aether || '', files, size });
 }
 
 if (problems.length) { console.error('Problems:\n- ' + problems.join('\n- ')); process.exit(1); }

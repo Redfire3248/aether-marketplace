@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-pixel-vapor',
   name: 'Pixel Vapor',
   dark: true,
+  pack: 'Pixel',
   style: 'pixel',
   ui: {
     bg: '#130f2e',

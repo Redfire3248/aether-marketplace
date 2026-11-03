@@ -1,7 +1,7 @@
 {
   "id": "theme-pixel-paper",
   "name": "Pixel Paper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Square pixels on a light page: cream with bold ink.",
   "author": "Redfire3248",
   "main": "main.js",

@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-arctic-night',
   name: 'Arctic Night',
   dark: true,
+  pack: 'Nature',
   ui: {
     bg: '#0a111c',
     panel: '#0f1826',

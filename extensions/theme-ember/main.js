@@ -5,6 +5,7 @@ const THEME = {
   id: 'theme-ember',
   name: 'Ember',
   dark: true,
+  pack: 'Nature',
   ui: {
     bg: '#17110f',
     panel: '#1e1714',
