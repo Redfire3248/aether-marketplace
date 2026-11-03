@@ -69,9 +69,19 @@
       <div class="row"><button class="btn primary" type="button" id="verified">Done</button><button class="btn" type="button" id="resend">Send it again</button><button class="linkish" type="button" data-out>Sign out</button></div>
     </section>
 
+    <!-- your name: picked after the first sign-in (Google gives one, you can change it), and changed any time -->
+    <section class="pub-card pub-signin" id="naming" hidden>
+      <h2>Pick your name</h2>
+      <p class="muted">People see it on the extensions you share. You can change it later.</p>
+      <form class="pub-form" id="name-form" novalidate>
+        <label class="field"><span>Your name</span><input id="nm-name" type="text" maxlength="40" required autocomplete="nickname"></label>
+        <div class="row"><button class="btn primary" type="submit" id="nm-save">Use this name</button><button class="btn" type="button" id="nm-skip">Not now</button></div>
+      </form>
+    </section>
+
     <!-- signed in -->
     <section id="studio" hidden>
-      <div class="pub-who"><span>Signed in as <b id="who"></b></span><button class="linkish" type="button" data-out>Sign out</button></div>
+      <div class="pub-who"><span>Signed in as <b id="who"></b></span><button class="linkish" type="button" id="rename">Change name</button><button class="linkish" type="button" data-out>Sign out</button></div>
       <div class="pub-head"><h2>Your extensions</h2><button class="btn primary" type="button" id="new">Share a new one</button></div>
       <div class="pub-mine" id="mine"><p class="muted">Loading...</p></div>
 

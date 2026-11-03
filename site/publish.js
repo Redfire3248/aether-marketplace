@@ -2,7 +2,7 @@
 // remove it. Saved in Firestore (see firestore.rules): extensions/<id> holds its card, files/main and files/readme its
 // code and page, shots/0..5 its screenshots. Pictures are made smaller here first, so each one fits.
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, getAdditionalUserInfo, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 import { getFirestore, doc, getDoc, setDoc, deleteDoc, collection, query, where, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 import { FIREBASE } from './firebase-config.js';
 
@@ -30,7 +30,9 @@ const plain = (e) => {
 // ---- signing in
 let making = false;
 const busy = (b, on, label) => { b.disabled = on; if (label) b.textContent = label; };
-$('google').onclick = async () => { try { await signInWithPopup(auth, new GoogleAuthProvider()); } catch (e) { const t = plain(e); if (t) say(t, 'error'); } };
+// someone new with Google picks the name people will see (Google's is filled in)
+let naming = false;
+$('google').onclick = async () => { try { const r = await signInWithPopup(auth, new GoogleAuthProvider()); if (getAdditionalUserInfo(r)?.isNewUser) askName(); } catch (e) { const t = plain(e); if (t) say(t, 'error'); } };
 $('switch').onclick = () => { making = !making; $('name-row').hidden = !making; $('email-go').textContent = making ? 'Make the account' : 'Sign in'; $('switch').textContent = making ? 'I have an account' : 'Make an account instead'; $('su-pass').autocomplete = making ? 'new-password' : 'current-password'; };
 $('forgot').onclick = async () => {
   const email = $('su-email').value.trim(); if (!email) { say('Type your email first, then press Forgot the password? again.', 'error'); $('su-email').focus(); return; }
@@ -53,9 +55,23 @@ for (const b of document.querySelectorAll('[data-out]')) b.onclick = () => signO
 $('resend').onclick = async () => { try { await sendEmailVerification(auth.currentUser); say('Sent again. Look in spam too.'); } catch (e) { say(plain(e), 'error'); } };
 $('verified').onclick = async () => { await auth.currentUser.reload(); await auth.currentUser.getIdToken(true); if (auth.currentUser.emailVerified) show(auth.currentUser); else say('Not checked yet: open the link in the email first.', 'error'); };
 
+function askName() { naming = true; show(auth.currentUser); $('nm-name').value = (auth.currentUser && auth.currentUser.displayName) || ''; $('nm-name').focus(); $('nm-name').select(); }
+$('rename').onclick = askName;
+$('nm-skip').onclick = () => { naming = false; show(auth.currentUser); };
+$('name-form').onsubmit = async (ev) => {
+  ev.preventDefault();
+  const name = $('nm-name').value.trim().slice(0, 40);
+  if (!name) { say('Type the name people will see.', 'error'); $('nm-name').focus(); return; }
+  busy($('nm-save'), true);
+  try { await updateProfile(auth.currentUser, { displayName: name }); naming = false; show(auth.currentUser); say('Your name is ' + name + ' now. Your shared extensions keep the name in their Shown as by, until you change them.'); } catch (e) { say(plain(e), 'error'); }
+  busy($('nm-save'), false);
+};
+
 function show(user) {
-  $('signin').hidden = !!user; $('verify').hidden = !user || user.emailVerified; $('studio').hidden = !user || !user.emailVerified;
-  if (!user) return;
+  if (!user) naming = false;
+  const ready = !!user && user.emailVerified;
+  $('signin').hidden = !!user; $('verify').hidden = !user || user.emailVerified; $('naming').hidden = !ready || !naming; $('studio').hidden = !ready || naming;
+  if (!user || naming) return;
   if (!user.emailVerified) { $('verify-email').textContent = user.email; return; }
   $('who').textContent = user.displayName || user.email;
   loadMine();
