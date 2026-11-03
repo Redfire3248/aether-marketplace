@@ -525,3 +525,12 @@ h1, h2, h3, .page-head h1, .ext-head h1 { font-family: var(--display); letter-sp
 [data-style="pixel"] :is(.facts, .install-steps) { font-size: 19px; }
 [data-style="pixel"] .side-card h2 { font-size: 24px; }
 [data-style="pixel"] .ext-desc { font-size: 21px; }
+
+/* the share page sits in the middle: its words, the sign-in box and everything after it */
+.pub .page-head { text-align: center; }
+.pub .page-head p { margin-inline: auto; }
+.pub :is(.pub-card, .pub-msg, .pub-head, .pub-mine, .pub-who) { margin-inline: auto; }
+.pub .pub-who { max-width: 820px; }
+.pub-signin h2, .pub-signin > p, #verify h2, #verify > p { text-align: center; }
+.pub-signin .row, #verify .row { justify-content: center; }
+.pub-signin .linkish { width: 100%; text-align: center; }
