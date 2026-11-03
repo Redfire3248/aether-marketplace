@@ -24,7 +24,11 @@ for (const id of fs.readdirSync(EXT).sort()) {
   for (const k of ['name', 'version', 'description', 'author']) if (!man[k] || typeof man[k] !== 'string') bad(`extension.json needs "${k}"`);
   if (man.version && !/^\d+\.\d+\.\d+$/.test(man.version)) bad('"version" is like 1.0.0');
   if (!CATEGORIES.includes(man.category)) bad('"category" is one of: ' + CATEGORIES.join(', '));
-  const files = filesOf(dir).sort();
+  const all = filesOf(dir).sort();
+  // screenshots (screenshots/*.png or .webp) are shown on its page; Aether does not download them when it installs
+  const SHOT = /^screenshots\/[\w-]+\.(png|webp)$/;
+  const screenshots = all.filter((f) => SHOT.test(f)), files = all.filter((f) => !SHOT.test(f));
+  if (screenshots.length > 6) bad('more than 6 screenshots');
   for (const f of files) if (!FILE_OK.test(f)) bad(`${f}: only .js .json .md .css .png .svg .txt .wav .mp3 .ogg files`);
   if (!files.includes(man.main || 'main.js')) bad(`its main file (${man.main || 'main.js'}) is missing`);
   if (!files.includes('README.md')) bad('README.md is missing');
@@ -36,10 +40,8 @@ for (const id of fs.readdirSync(EXT).sort()) {
     try { new Function(code); } catch (e) { bad(`${f}: ${e.message}`); }
     if (/\beval\s*\(|new Function\s*\(|require\s*\(\s*['"]child_process/.test(code)) bad(`${f}: eval, new Function and child_process are not allowed (use aether.shell.exec)`);
   }
-  // a picture for its icon (icon.png or icon.svg) and screenshots (screenshots/*.png), shown on its page
+  // a picture for its icon (icon.png or icon.svg), shown on its page
   const image = ['icon.png', 'icon.svg'].find((f) => files.includes(f));
-  const screenshots = files.filter((f) => /^screenshots\/[\w-]+\.png$/.test(f));
-  if (screenshots.length > 6) bad('more than 6 screenshots');
   out.push({ id, name: man.name, version: man.version, author: man.author, description: man.description, icon: man.icon || 'puzzle', image, screenshots: screenshots.length ? screenshots : undefined, tags: man.tags || [], category: man.category, preview: man.preview || undefined, aether: man.aether || '', files, size });
 }
 

@@ -18,7 +18,7 @@
     const [, px, dark, bg, panel, line, text, muted, accent, accent2, , on] = LIST[i];
     const vars = { bg, panel, elevated: mix(text, panel, 5), hover: mix(text, panel, 9), border: line, text, muted, accent, accent2, 'accent-text': on, 'code-bg': mix(bg, panel, 50), glow: mix(accent, 'transparent', 22),
       // the colours of code in the guides, made from the theme so they read well on it
-      'c-key': mix(accent, text, 72), 'c-fn': mix(accent2, text, 80), 'c-str': mix(LIST[i][10], text, 78), 'c-num': mix(dark ? '#ffb86b' : '#b4570f', text, 85), 'c-com': muted };
+      'c-key': mix(accent, text, 72), 'c-fn': mix(accent2, text, 80), 'c-str': mix(LIST[i][10], text, 78), 'c-num': mix(dark ? '#ffb86b' : '#b4570f', text, 85), 'c-com': muted, 'c-var': mix(dark ? '#9fd3ff' : '#1d5fa8', text, 72) };
     for (const [k, v] of Object.entries(vars)) root.style.setProperty('--' + k, v);
     root.dataset.theme = dark ? 'dark' : 'light';
     if (px) root.dataset.style = 'pixel'; else delete root.dataset.style;

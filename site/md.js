@@ -39,7 +39,7 @@
       if (c) out += `<span class="c">${esc(c)}</span>`;
       else if (s) out += `<span class="${L === 'json' && /^\s*:/.test(rest) ? 'f' : 's'}">${esc(s)}</span>`;
       else if (n) out += `<span class="n">${esc(n)}</span>`;
-      else if (w) out += keys.has(w) ? `<span class="k">${esc(w)}</span>` : /^\s*\(/.test(rest) ? `<span class="f">${esc(w)}</span>` : /^[A-Z][a-z]/.test(w) && L !== 'sh' ? `<span class="t">${esc(w)}</span>` : esc(w);
+      else if (w) out += keys.has(w) ? `<span class="k">${esc(w)}</span>` : /^\s*\(/.test(rest) ? `<span class="f">${esc(w)}</span>` : /^[A-Z][a-z]/.test(w) && L !== 'sh' ? `<span class="t">${esc(w)}</span>` : L === 'json' ? esc(w) : `<span class="v">${esc(w)}</span>`;
       else out += esc(all);
     }
     return out;

@@ -8,6 +8,10 @@
       "author": "Aether",
       "description": "Three more looks for Aether's cat: Siamese, Cinnamon and Russian blue.",
       "icon": "paw",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "pets",
         "skins"
@@ -28,6 +32,9 @@
       "author": "Aether",
       "description": "A small square of the colour before every colour in your code: #hex, rgb() and hsl(), in CSS, HTML, JS, JSON and more.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "css",
         "colours",
@@ -50,6 +57,10 @@
       "author": "Aether",
       "description": "Three more looks for Aether's dog: Dalmatian, Corgi and Silver grey.",
       "icon": "paw",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "pets",
         "skins"
@@ -70,6 +81,10 @@
       "author": "Aether",
       "description": "Focus in blocks with breaks between, from the status bar. It chimes at the end and counts your blocks for the day.",
       "icon": "clock",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "productivity",
         "timer"
@@ -90,6 +105,10 @@
       "author": "Aether",
       "description": "Three more looks for Aether's fox: Cross fox, Shadow and Spirit.",
       "icon": "paw",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "pets",
         "skins"
@@ -110,6 +129,10 @@
       "author": "Aether",
       "description": "The status bar shows who last changed the cursor's line and when. Click it for the commit's message.",
       "icon": "git",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "git",
         "history"
@@ -130,6 +153,10 @@
       "author": "Aether",
       "description": "Type a short abbreviation like ul>li*3 or div.card>h2+p and press Ctrl+Alt+E to turn it into HTML.",
       "icon": "code",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "html",
         "web",
@@ -151,6 +178,10 @@
       "author": "Aether",
       "description": "Format, minify or sort the keys of JSON (the selection or the whole file), and see where the error is when it is not valid.",
       "icon": "braces",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "json",
         "formatting",
@@ -172,6 +203,10 @@
       "author": "Aether",
       "description": "Line up the columns of the table the cursor is in, add a row or a column, and turn comma- or tab-separated text into a table.",
       "icon": "grid",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "markdown",
         "writing",
@@ -193,6 +228,10 @@
       "author": "Aether",
       "description": "Three more pets for Aether: a frog, a penguin and a bunny. Their other looks are in Pet Pack Skins.",
       "icon": "paw",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "pets",
         "fun"
@@ -213,6 +252,10 @@
       "author": "Aether",
       "description": "More looks for the Pet Pack: a poison blue and a golden frog, an emperor and a pink penguin, a brown and a grey bunny.",
       "icon": "paw",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "pets",
         "skins"
@@ -233,6 +276,9 @@
       "author": "Aether",
       "description": "Put placeholder text, today's date, the time, a unique id, a strong password or a random number at the cursor.",
       "icon": "plus",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "text",
         "productivity"
@@ -253,6 +299,9 @@
       "author": "Aether",
       "description": "A tab of its own to try a regular expression on some text: matches highlighted, groups listed, and a replace preview.",
       "icon": "search",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "regex",
         "text",
@@ -275,6 +324,9 @@
       "author": "Aether",
       "description": "Change case (camelCase, snake_case, Title Case and more), and sort, clean up, number or join lines.",
       "icon": "type",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "text",
         "editing"
@@ -295,6 +347,9 @@
       "author": "Aether",
       "description": "Cold and clear: midnight blue with icy light.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -330,6 +385,9 @@
       "author": "Aether",
       "description": "Dark and dramatic: black-red with a burning crimson.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -365,6 +423,9 @@
       "author": "Aether",
       "description": "Black and electric yellow, straight out of the future.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -400,6 +461,9 @@
       "author": "Aether",
       "description": "Dark and calm, deep blues with teal.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -435,6 +499,9 @@
       "author": "Aether",
       "description": "Dark and warm, browns with a glowing orange.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -470,6 +537,9 @@
       "author": "Aether",
       "description": "Dark and quiet, deep greens with mint.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -505,6 +575,9 @@
       "author": "Aether",
       "description": "Light and cool, crisp blues and greys.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "light"
@@ -540,6 +613,9 @@
       "author": "Aether",
       "description": "Light and soft: pale purple with deep violet ink.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "light"
@@ -575,6 +651,9 @@
       "author": "Aether",
       "description": "Calm and light: creamy green tea with deep leaf green.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "light"
@@ -610,6 +689,9 @@
       "author": "Aether",
       "description": "Light and fresh, soft greens.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "light"
@@ -645,6 +727,9 @@
       "author": "Aether",
       "description": "Dark and bright, glowing teal and pink.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -680,6 +765,13 @@
       "author": "Aether",
       "description": "Five calm light themes in one: Glacier, Lavender Mist, Matcha, Mint Cream and Paper.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp",
+        "screenshots/3.webp",
+        "screenshots/4.webp",
+        "screenshots/5.webp"
+      ],
       "tags": [
         "themes",
         "pack",
@@ -716,6 +808,13 @@
       "author": "Aether",
       "description": "Five dark themes from the outdoors in one: Forest Night, Deep Sea, Arctic Night, Ember and Blood Moon.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp",
+        "screenshots/3.webp",
+        "screenshots/4.webp",
+        "screenshots/5.webp"
+      ],
       "tags": [
         "themes",
         "pack",
@@ -752,6 +851,12 @@
       "author": "Aether",
       "description": "Four bright night themes in one: Neon Tide, Cyber Noir, Tokyo Rain and Plum Dusk.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp",
+        "screenshots/3.webp",
+        "screenshots/4.webp"
+      ],
       "tags": [
         "themes",
         "pack",
@@ -788,6 +893,14 @@
       "author": "Aether",
       "description": "Six square-pixel themes in one: Amber, Cherry, Mint, Paper, Sunset and Vapor.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp",
+        "screenshots/3.webp",
+        "screenshots/4.webp",
+        "screenshots/5.webp",
+        "screenshots/6.webp"
+      ],
       "tags": [
         "themes",
         "pack",
@@ -826,6 +939,9 @@
       "author": "Aether",
       "description": "Light and warm, like a page in a book.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "light"
@@ -861,6 +977,9 @@
       "author": "Aether",
       "description": "An old amber monitor: warm glowing orange on black.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark",
@@ -897,6 +1016,9 @@
       "author": "Aether",
       "description": "Square pixels with a bite: dark red with cherry pink.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark",
@@ -933,6 +1055,9 @@
       "author": "Aether",
       "description": "Square pixels, cool and clean: deep teal with bright mint.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark",
@@ -969,6 +1094,9 @@
       "author": "Aether",
       "description": "Square pixels on a light page: cream with bold ink.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "light",
@@ -1005,6 +1133,9 @@
       "author": "Aether",
       "description": "Square pixels at dusk: deep purple with orange and pink.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark",
@@ -1041,6 +1172,9 @@
       "author": "Aether",
       "description": "Square pixels, loud and pink: hot pink and cyan on indigo.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark",
@@ -1077,6 +1211,9 @@
       "author": "Aether",
       "description": "Dark and soft, deep purples with pink.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -1112,6 +1249,9 @@
       "author": "Aether",
       "description": "City lights in the rain: deep indigo with neon signs.",
       "icon": "palette",
+      "screenshots": [
+        "screenshots/1.webp"
+      ],
       "tags": [
         "themes",
         "dark"
@@ -1147,6 +1287,10 @@
       "author": "Aether",
       "description": "Words and reading time in the status bar for Markdown and text files, and for whatever you select.",
       "icon": "book",
+      "screenshots": [
+        "screenshots/1.webp",
+        "screenshots/2.webp"
+      ],
       "tags": [
         "writing",
         "markdown"

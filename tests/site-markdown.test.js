@@ -39,7 +39,7 @@ test('lists, nested lists and ordered lists', () => {
 });
 
 test('code blocks, quotes, rules and tables', () => {
-  assert.strictEqual(r('```js\nif (a < b) {}\n```'), '<pre><code class="language-js"><span class="k">if</span> (a &lt; b) {}</code></pre>');
+  assert.strictEqual(r('```js\nif (a < b) {}\n```'), '<pre><code class="language-js"><span class="k">if</span> (<span class="v">a</span> &lt; <span class="v">b</span>) {}</code></pre>');
   assert.strictEqual(r('```\nif (a < b) {}\n```'), '<pre><code>if (a &lt; b) {}</code></pre>', 'no language: no colours');
   assert.strictEqual(r('    indented\n    code'), '<pre><code>indented\ncode</code></pre>');
   assert.strictEqual(r('> **Trust.** Be careful.'), '<blockquote><p><strong>Trust.</strong> Be careful.</p></blockquote>');
@@ -58,7 +58,7 @@ test('every README renders, with no raw HTML getting through', () => {
 
 test('code in Aether Script, JavaScript and JSON is coloured, and nothing in it becomes HTML', () => {
   assert.strictEqual(r('```aes\nfunc hi(n):\n  # note\n  print("<b>", 2)\n```'),
-    '<pre><code class="language-aes"><span class="k">func</span> <span class="f">hi</span>(n):\n  <span class="c"># note</span>\n  <span class="f">print</span>(<span class="s">&quot;&lt;b&gt;&quot;</span>, <span class="n">2</span>)</code></pre>');
+    '<pre><code class="language-aes"><span class="k">func</span> <span class="f">hi</span>(<span class="v">n</span>):\n  <span class="c"># note</span>\n  <span class="f">print</span>(<span class="s">&quot;&lt;b&gt;&quot;</span>, <span class="n">2</span>)</code></pre>');
   assert.match(r('```json\n{"id": "x"}\n```'), /<span class="f">&quot;id&quot;<\/span>: <span class="s">&quot;x&quot;<\/span>/);
   assert.match(r('```js\nconst a = 1 // <script>\n```'), /<span class="c">\/\/ &lt;script&gt;<\/span>/);
 });

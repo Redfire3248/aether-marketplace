@@ -546,3 +546,6 @@ h1, h2, h3, .page-head h1, .ext-head h1 { font-family: var(--display); letter-sp
 [data-style="pixel"] .trusted { font-family: var(--sans); font-weight: 400; border-width: 2px; }
 [data-style="pixel"] .by-aether { animation-timing-function: steps(24, end); }
 @media (prefers-reduced-motion: reduce) { .by-aether { animation: none; } }
+
+/* names (variables) in code have a colour of their own too */
+.md pre .v { color: var(--c-var, #9fd3ff); }
