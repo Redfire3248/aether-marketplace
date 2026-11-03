@@ -6,7 +6,7 @@ Open a file and press **F5** (**Run > Run Active File**). It runs in the termina
 
 Aether runs these, once the language is on your PC: Python, JavaScript (Node.js), TypeScript, C, C++, C#, F#, Java, Kotlin, Go, Rust, Swift, Dart, Ruby, PHP, Lua, Perl, R, Julia, Elixir, Haskell, Zig, Nim, PowerShell, shell scripts and batch files.
 
-[Aether Script](aether-script.md) needs nothing installed: a `.aes` program runs inside Aether, and can open windows of its own.
+[Aether Script](aether-script.md) needs nothing else on your PC. A `.aes` program runs right inside Aether, and it can open its own windows.
 
 In a game folder, F5 runs the game whatever file is open. **Ctrl+F5** always runs the game.
 

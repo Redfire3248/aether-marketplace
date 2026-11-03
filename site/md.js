@@ -15,6 +15,37 @@
     return (base || '') + u.replace(/^\.\//, '');
   }
 
+  // ---- colours for code blocks: notes, words in quotes, numbers, keywords and the names of functions
+  const WORDS = {
+    aes: 'func class return if elif else for in while break continue import from as const let var true false none null and or not try except finally raise throw match case new self super this pass async await with yield is extends lambda',
+    js: 'function class return if else for of in while do break continue import export from as const let var true false null undefined new this super try catch finally throw switch case default typeof instanceof async await yield delete void extends static get set',
+    py: 'def class return if elif else for in while break continue import from as True False None and or not try except finally raise with yield lambda pass global nonlocal is async await self',
+    c: 'void int long short char float double bool unsigned signed const static struct enum class public private protected return if else for while do break continue switch case default new delete true false nullptr NULL include define using namespace auto byte boolean String setup loop HIGH LOW OUTPUT INPUT',
+    sh: 'if then else elif fi for in do done while case esac function return export local echo cd set'
+  };
+  const LANG = { aes: 'aes', aether: 'aes', aetherscript: 'aes', js: 'js', javascript: 'js', ts: 'js', typescript: 'js', mjs: 'js', json: 'json', py: 'py', python: 'py', c: 'c', cpp: 'c', 'c++': 'c', ino: 'c', arduino: 'c', java: 'c', cs: 'c', sh: 'sh', bash: 'sh', shell: 'sh', powershell: 'sh', ps1: 'sh', bat: 'sh', cmd: 'sh' };
+  const sets = {};
+  function colour(code, lang) {
+    const L = LANG[String(lang || '').toLowerCase()];
+    if (!L) return esc(code);
+    const keys = sets[L] || (sets[L] = new Set((WORDS[L] || '').split(' ')));
+    const note = (L === 'aes' || L === 'py' || L === 'sh' ? /#[^\n]*/ : L === 'json' ? /(?!)/ : /\/\/[^\n]*|\/\*[\s\S]*?\*\//).source;
+    const str = /"(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*'/.source + (L === 'js' ? '|' + /`(?:\\.|[^`\\])*`/.source : '');
+    const num = /\b(?:0x[\da-f]+|\d[\d_]*(?:\.\d+)?(?:e[+-]?\d+)?)\b/.source;
+    const re = new RegExp(`(${note})|(${str})|(${num})|([A-Za-z_$][\\w$]*)|([\\s\\S])`, 'gi');
+    let out = '', m;
+    while ((m = re.exec(code))) {
+      const [all, c, s, n, w] = m, rest = code.slice(re.lastIndex);
+      if (c) out += `<span class="c">${esc(c)}</span>`;
+      else if (s) out += `<span class="${L === 'json' && /^\s*:/.test(rest) ? 'f' : 's'}">${esc(s)}</span>`;
+      else if (n) out += `<span class="n">${esc(n)}</span>`;
+      else if (w) out += keys.has(w) ? `<span class="k">${esc(w)}</span>` : /^\s*\(/.test(rest) ? `<span class="f">${esc(w)}</span>` : /^[A-Z][a-z]/.test(w) && L !== 'sh' ? `<span class="t">${esc(w)}</span>` : esc(w);
+      else out += esc(all);
+    }
+    return out;
+  }
+  root.AetherMarkdownColour = colour;
+
   // ---- inside a line
   function inline(text, opts) {
     const keep = [];
@@ -82,7 +113,7 @@
         const close = new RegExp(`^ {0,3}${m[1][0] === '`' ? '`' : '~'}{${m[1].length},}\\s*$`), body = [];
         for (i++; i < lines.length && !close.test(lines[i]); i++) body.push(lines[i]);
         i++;
-        out.push(`<pre><code${m[2] ? ` class="language-${esc(m[2])}"` : ''}>${esc(body.join('\n'))}</code></pre>`);
+        out.push(`<pre><code${m[2] ? ` class="language-${esc(m[2])}"` : ''}>${colour(body.join('\n'), m[2])}</code></pre>`);
       } else if (/^( {4}|\t)/.test(l)) {
         const body = [];
         while (i < lines.length && (/^( {4}|\t)/.test(lines[i]) || !lines[i].trim())) body.push(lines[i++].replace(/^( {4}|\t)/, ''));
