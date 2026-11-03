@@ -1,7 +1,7 @@
 {
   "id": "dog-skins",
   "name": "Dog Skins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Three more looks for Aether's dog: Dalmatian, Corgi and Silver grey.",
   "author": "Redfire3248",
   "main": "main.js",
@@ -11,5 +11,5 @@
     "skins"
   ],
   "category": "Pets",
-  "aether": ">=1.9.27"
+  "aether": ">=1.9.28"
 }

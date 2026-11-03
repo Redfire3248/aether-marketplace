@@ -23,7 +23,7 @@ test('each skin pack adds good skins to real pets', () => {
   for (const id of PACKS) {
     const { did, aether } = load(id);
     assert.ok(did.skins.length, `${id} adds skins`);
-    assert.strictEqual(aether.manifest.aether, '>=1.9.27', `${id} needs the Aether that has addSkins`);
+    assert.strictEqual(aether.manifest.aether, '>=1.9.28', `${id} needs the Aether that has addSkins`);
     for (const { kind, skins } of did.skins) {
       assert.ok(kinds.includes(kind), `${id}: ${kind} is a pet`);
       assert.strictEqual(new Set(skins.map((s) => s[0])).size, skins.length, `${id}: skin ids are all different`);
@@ -44,11 +44,11 @@ test('a skin pack does not reuse a look the pet already has', () => {
   for (const id of PACKS) for (const { kind, skins } of load(id).did.skins) for (const [sid] of skins) assert.ok(!own[kind].includes(sid), `${id}: ${kind} already has ${sid}`);
 });
 
-test('every pack says what it adds, and the skin packs say they need Aether 1.9.27', () => {
+test('every pack says what it adds, and the skin packs say they need Aether 1.9.28', () => {
   for (const id of PACKS) {
     const readme = fs.readFileSync(path.join(__dirname, '..', 'extensions', id, 'README.md'), 'utf8');
     assert.match(readme, /Settings > Pets/);
-    assert.match(readme, /1\.9\.27/);
+    assert.match(readme, /1\.9\.28/);
   }
 });
 
@@ -59,6 +59,6 @@ test('on an older Aether a skin pack says what it needs instead of failing', () 
     const old = load(id, { before: (aether) => { delete aether.pets.addSkins; } });
     assert.ok(ext.did.skins.length);
     assert.strictEqual(old.did.skins.length, 0);
-    assert.match(old.did.toasts[0].message, /needs Aether 1\.9\.27/);
+    assert.match(old.did.toasts[0].message, /needs Aether 1\.9\.28/);
   }
 });
