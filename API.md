@@ -228,6 +228,17 @@ aether.pets.add({
 
 `aether.pets.add()` returns `{ id, call(), peek(), dispose() }`. When your extension is turned off, its pets leave and are removed. `aether.pets.call(kind)`, `aether.pets.peek(kind)` and `aether.pets.kinds()` work with any pet, built in or not (`cat`, `dog`, `fox`, `slime`, `ghost`, `chick`).
 
+**Skin packs** (Aether 1.9.27 or newer). `aether.pets.addSkins(kind, skins)` gives any pet more skins: a built-in one (`cat`, `dog`, `fox`, `slime`, `ghost`, `chick`) or one from an extension. Each skin is `[id, name, main, light, dark]`, with an optional sixth colour for the eyes and nose (for a dark skin). Like a pet's own skins, it swaps the pet's first skin's three colours for its own. A skin pack can load before its pet: the skins wait and show when the pet comes. They appear in Settings > Pets with the pet's own, and go when your extension is turned off.
+
+```js
+aether.pets.addSkins('cat', [
+  ['siamese', 'Siamese', '#efe3cf', '#ffffff', '#5a4032'],
+  ['ginger', 'Ginger', '#e0752e', '#ffc58f', '#a34a14']
+]);
+```
+
+A pet from an extension is named after the extension: the `frog` of the extension `pet-pack` is `pet-pack-frog` (`aether.pets.kinds()` lists them all).
+
 ### Running things
 
 | | |

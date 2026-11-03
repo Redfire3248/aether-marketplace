@@ -89,7 +89,9 @@ code, pre, kbd { font-family: var(--mono); font-size: 0.9em; }
 }
 @media (max-width: 380px) {
   .nav { gap: 0; }
-  .nav a { padding: 6px 6px; font-size: 14px; }
+  .nav a { padding: 6px 4px; font-size: 13.5px; }
+  .theme-btn { gap: 5px; padding: 0 9px; }
+  .theme-btn svg { display: none; } /* the dot alone, so everything fits */
   .brand { font-size: 16px; }
 }
 
@@ -300,3 +302,50 @@ footer nav { display: flex; flex-wrap: wrap; gap: 16px; margin-left: auto; }
 .preview.pixel .pv-code .c { font-style: normal; }
 .preview.pixel :is(.pv-title b, .pv-search, .pv-side b, .pv-status) { font-size: 16px; font-weight: 400; letter-spacing: .03em; text-transform: none; }
 .preview.pixel .pv-title img { image-rendering: auto; }
+
+/* ---- the docs: guides on the left, the guide, "On this page" on the right */
+.docs { display: grid; grid-template-columns: 230px minmax(0, 1fr) 190px; gap: 36px; align-items: start; padding-top: 28px; padding-bottom: 20px; }
+.docs-side, .docs-here { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow: auto; }
+.docs-side .search { margin-bottom: 14px; }
+.docs-topics > summary { display: none; }
+.docs-group { margin: 16px 0 4px; font: 600 12px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+#toc-nav a, #here a { display: block; padding: 5px 10px; border-radius: 8px; color: var(--muted); font-size: 15px; line-height: 1.35; }
+#toc-nav a:hover, #here a:hover { color: var(--text); background: var(--hover); text-decoration: none; }
+#toc-nav a[aria-current] { color: var(--accent-text); background: var(--accent); }
+.docs-here-h { margin: 4px 10px 6px; font-size: 13px; font-weight: 600; color: var(--text); }
+#here a { font-size: 14px; padding: 3px 10px; border-left: 2px solid var(--border); border-radius: 0; }
+#here a.sub { padding-left: 22px; font-size: 13px; }
+.docs-main { min-width: 0; }
+.docs-main .md { max-width: 760px; }
+.docs-main .md h1 { font-size: clamp(30px, 5vw, 40px); margin-bottom: .4em; }
+.docs-main .md h2 { padding-top: .4em; border-top: 1px solid var(--border); }
+.docs-main .md h2, .docs-main .md h3 { scroll-margin-top: 76px; }
+.docs-pager { display: flex; justify-content: space-between; gap: 12px; max-width: 760px; margin: 34px 0 10px; }
+.docs-pager a { flex: 1 1 0; max-width: 48%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); font-weight: 600; }
+.docs-pager a:hover { border-color: var(--accent); text-decoration: none; }
+.docs-pager a.next { text-align: right; margin-left: auto; }
+.docs-pager small { display: block; color: var(--muted); font-weight: 400; font-size: 13px; }
+.docs-results { max-width: 760px; }
+.docs-hit { display: block; padding: 12px 14px; margin: 0 0 8px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); }
+.docs-hit:hover { border-color: var(--accent); text-decoration: none; }
+.docs-hit b { margin-right: 8px; }
+.docs-hit p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.docs-hit mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: var(--text); border-radius: 3px; }
+@media (max-width: 1100px) { .docs { grid-template-columns: 220px minmax(0, 1fr); } .docs-here { display: none; } }
+@media (max-width: 760px) {
+  .docs { grid-template-columns: minmax(0, 1fr); gap: 14px; padding-top: 18px; }
+  .docs-side { position: static; max-height: none; overflow: visible; }
+  .docs-topics { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 4px 8px; }
+  .docs-topics > summary { display: block; padding: 8px 4px; font-weight: 600; cursor: pointer; }
+  .docs-pager a { max-width: none; }
+}
+[data-style="pixel"] :is(.docs-pager a, .docs-hit, .docs-topics) { border: 3px solid var(--border); box-shadow: 4px 4px 0 #000; }
+[data-style="pixel"] :is(#toc-nav a, #here a, .docs-group, .docs-here-h) { font-size: 19px; }
+[data-style="pixel"] #toc-nav a[aria-current] { box-shadow: 2px 2px 0 #000; }
+[data-style="pixel"] .docs-main .md h2 { border-top-width: 3px; }
+
+/* the smallest phones in a pixel theme: after the pixel rules, so these win */
+@media (max-width: 380px) {
+  [data-style="pixel"] .nav a { font-size: 16px; padding: 6px 3px; }
+  [data-style="pixel"] .theme-btn { gap: 5px; padding: 0 8px; }
+}

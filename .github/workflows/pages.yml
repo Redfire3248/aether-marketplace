@@ -26,6 +26,7 @@ jobs:
           mkdir _site
           cp -r site/. _site/
           cp index.json _site/
+          cp API.md _site/          # the docs page shows it as Making extensions
           cp -r extensions _site/extensions
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
