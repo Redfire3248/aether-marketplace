@@ -1,0 +1,15 @@
+{
+  "id": "cat-skins",
+  "name": "Cat Skins",
+  "version": "1.0.0",
+  "description": "Three more looks for Aether's cat: Siamese, Cinnamon and Russian blue.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "paw",
+  "tags": [
+    "pets",
+    "skins"
+  ],
+  "category": "Pets",
+  "aether": ">=1.9.27"
+}

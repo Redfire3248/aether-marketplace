@@ -17,7 +17,11 @@ They install in a moment, start at once, and update with one click when a new ve
 | [Word Count](extensions/word-count) | Words and reading time for Markdown and text, and for any selection. |
 | [Colour Swatches](extensions/colour-swatches) | A square of the colour before every colour in your code. |
 | [Quick Insert](extensions/quick-insert) | Placeholder text, dates, times, unique ids, strong passwords, random numbers. |
-| [Pet Pack](extensions/pet-pack) | A frog, a penguin and a bunny to visit you, with skins. |
+| [Pet Pack](extensions/pet-pack) | A frog, a penguin and a bunny to visit you. |
+| [Pet Pack Skins](extensions/pet-pack-skins) | More looks for the Pet Pack's frog, penguin and bunny. |
+| [Cat Skins](extensions/cat-skins) | Siamese, Cinnamon and Russian blue looks for Aether's cat. |
+| [Dog Skins](extensions/dog-skins) | Dalmatian, Corgi and Silver grey looks for Aether's dog. |
+| [Fox Skins](extensions/fox-skins) | Cross fox, Shadow and Spirit looks for Aether's fox. |
 | [JSON Tools](extensions/json-tools) | Format, minify or sort the keys of JSON, and see where the error is when it is not valid. |
 | [Markdown Tables](extensions/markdown-tables) | Line up a table's columns, add a row or a column, and turn CSV or tab-separated text into a table. |
 | [Git Line](extensions/git-line) | Who last changed the cursor's line and when, in the status bar. Click it for the commit message. |

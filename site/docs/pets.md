@@ -31,4 +31,4 @@ These are commands (**Ctrl+Shift+P**):
 
 ## More pets and skins
 
-The [Marketplace](extensions.md) has pets and skin packs: install one, and it shows in Settings > Pets with the others. You can also make your own pet, drawn in code or from a sprite sheet: see [Making extensions](API.md#aether-pets-pets-of-your-own).
+The [Marketplace](extensions.md) has pets and skin packs. **Pet Pack** brings a frog, a penguin and a bunny; **Pet Pack Skins** gives them more looks; **Cat Skins**, **Dog Skins** and **Fox Skins** give Aether's own pets more. Install one, and it shows in Settings > Pets with the others. (Skin packs need Aether 1.9.27 or newer.) You can also make your own pet, drawn in code or from a sprite sheet: see [Making extensions](API.md#aether-pets-pets-of-your-own).

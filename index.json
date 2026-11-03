@@ -2,6 +2,26 @@
   "version": 1,
   "extensions": [
     {
+      "id": "cat-skins",
+      "name": "Cat Skins",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Three more looks for Aether's cat: Siamese, Cinnamon and Russian blue.",
+      "icon": "paw",
+      "tags": [
+        "pets",
+        "skins"
+      ],
+      "category": "Pets",
+      "aether": ">=1.9.27",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1435
+    },
+    {
       "id": "colour-swatches",
       "name": "Colour Swatches",
       "version": "1.0.0",
@@ -24,6 +44,26 @@
       "size": 3743
     },
     {
+      "id": "dog-skins",
+      "name": "Dog Skins",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Three more looks for Aether's dog: Dalmatian, Corgi and Silver grey.",
+      "icon": "paw",
+      "tags": [
+        "pets",
+        "skins"
+      ],
+      "category": "Pets",
+      "aether": ">=1.9.27",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1407
+    },
+    {
       "id": "focus-timer",
       "name": "Focus Timer",
       "version": "1.0.0",
@@ -42,6 +82,26 @@
         "main.js"
       ],
       "size": 5262
+    },
+    {
+      "id": "fox-skins",
+      "name": "Fox Skins",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "Three more looks for Aether's fox: Cross fox, Shadow and Spirit.",
+      "icon": "paw",
+      "tags": [
+        "pets",
+        "skins"
+      ],
+      "category": "Pets",
+      "aether": ">=1.9.27",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1395
     },
     {
       "id": "git-line",
@@ -129,9 +189,9 @@
     {
       "id": "pet-pack",
       "name": "Pet Pack",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "author": "Redfire3248",
-      "description": "Three more pets for Aether: a frog, a penguin and a bunny, each with three skins.",
+      "description": "Three more pets for Aether: a frog, a penguin and a bunny. Their other looks are in Pet Pack Skins.",
       "icon": "paw",
       "tags": [
         "pets",
@@ -144,7 +204,27 @@
         "extension.json",
         "main.js"
       ],
-      "size": 4956
+      "size": 4803
+    },
+    {
+      "id": "pet-pack-skins",
+      "name": "Pet Pack Skins",
+      "version": "1.0.0",
+      "author": "Redfire3248",
+      "description": "More looks for the Pet Pack: a poison blue and a golden frog, an emperor and a pink penguin, a brown and a grey bunny.",
+      "icon": "paw",
+      "tags": [
+        "pets",
+        "skins"
+      ],
+      "category": "Pets",
+      "aether": ">=1.9.27",
+      "files": [
+        "README.md",
+        "extension.json",
+        "main.js"
+      ],
+      "size": 1982
     },
     {
       "id": "quick-insert",

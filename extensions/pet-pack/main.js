@@ -1,10 +1,10 @@
-// Pet Pack: three more pets (a frog, a penguin and a bunny), each with skins. They visit like the others,
-// and show in Settings > Pets, where you can call them, peek them in and pick their skins.
+// Pet Pack: three more pets (a frog, a penguin and a bunny). They visit like the others, and show in
+// Settings > Pets, where you can call them and peek them in. More looks for them are in Pet Pack Skins.
 
 aether.pets.add({
   id: 'frog', name: 'Frog', speed: 30,
   says: ['Ribbit.', 'Croak?', 'Is that a fly?', 'Hop hop.'],
-  skins: [['green', 'Green', '#4cc95a', '#b8f0a0', '#2c8a3a'], ['blue', 'Poison blue', '#3a8cff', '#bfe0ff', '#1d4fb0'], ['gold', 'Golden', '#e8b923', '#fff0a8', '#9a7408']],
+  skins: [['green', 'Green', '#4cc95a', '#b8f0a0', '#2c8a3a']],
   draw(g, pose, f) {
     const hop = pose === 'walk' ? Math.round(Math.abs(Math.sin(f.phase * Math.PI * 2)) * 4) : pose === 'happy' ? 2 : 0;
     const y = f.floor - 7 - hop, sleep = pose === 'sleep';
@@ -25,7 +25,7 @@ aether.pets.add({
 aether.pets.add({
   id: 'penguin', name: 'Penguin', speed: 22,
   says: ['Waddle waddle.', 'Brr!', 'Fish?', 'Slide time.'],
-  skins: [['classic', 'Classic', '#2b2f3a', '#f4f6fb', '#171a21'], ['emperor', 'Emperor', '#3b4250', '#fff3cc', '#22262e'], ['pink', 'Pink', '#c94b84', '#ffe1ef', '#7d2a51']],
+  skins: [['classic', 'Classic', '#2b2f3a', '#f4f6fb', '#171a21']],
   draw(g, pose, f) {
     const sway = pose === 'walk' ? Math.round(Math.sin(f.phase * Math.PI * 2)) : 0;
     const sleep = pose === 'sleep', squat = sleep ? 2 : 0, y = f.floor;
@@ -47,7 +47,7 @@ aether.pets.add({
 aether.pets.add({
   id: 'bunny', name: 'Bunny', speed: 40,
   says: ['*nose wiggle*', 'Carrot?', 'Boing!', 'Soft paws.'],
-  skins: [['snow', 'Snow', '#ece6dc', '#ffffff', '#b8ad9d'], ['brown', 'Brown', '#a8774f', '#e9cfb4', '#6e4a2c'], ['grey', 'Grey', '#9aa0aa', '#e3e6ea', '#5f6570']],
+  skins: [['snow', 'Snow', '#ece6dc', '#ffffff', '#b8ad9d']],
   draw(g, pose, f) {
     const hop = pose === 'walk' ? Math.round(Math.abs(Math.sin(f.phase * Math.PI * 2)) * 5) : pose === 'happy' ? 3 : 0;
     const sleep = pose === 'sleep', y = f.floor - hop;

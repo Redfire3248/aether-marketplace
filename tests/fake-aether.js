@@ -34,9 +34,9 @@ function fakeEditor(text, { path: p = '/project/file.txt', language = 'plaintext
   };
 }
 
-function load(id, { editor = null, exec, settings = {}, globals = {}, monaco } = {}) {
+function load(id, { editor = null, exec, settings = {}, globals = {}, monaco, before } = {}) {
   const file = path.join(__dirname, '..', 'extensions', id, 'main.js');
-  const did = { commands: {}, toasts: [], status: [], views: {}, opened: [], themes: [], picks: [], disposers: [], listeners: {}, execs: [], terminal: [] };
+  const did = { commands: {}, toasts: [], status: [], views: {}, opened: [], themes: [], picks: [], disposers: [], listeners: {}, execs: [], terminal: [], pets: [], skins: [] };
   const own = (x) => ({ dispose() {}, ...x });
   const aether = {
     id, version: '1.9.23', dir: path.dirname(file), manifest: JSON.parse(fs.readFileSync(path.join(path.dirname(file), 'extension.json'), 'utf8')),
@@ -72,6 +72,11 @@ function load(id, { editor = null, exec, settings = {}, globals = {}, monaco } =
     },
     languages: { completions: () => own(), hovers: () => own(), formatter: () => own(), snippets: () => own(), problems() {} },
     themes: { add(t) { did.themes.push(t); return own(); } },
+    pets: {
+      add(def) { did.pets.push(def); return own({ id: `${id}-${def.id}`, call() {}, peek() {} }); },
+      addSkins(kind, skins) { did.skins.push({ kind, skins }); return own(); },
+      call() {}, peek() {}, kinds: () => ['cat', 'dog', 'fox', 'slime', 'ghost', 'chick']
+    },
     terminal: { run(cmd) { did.terminal.push(cmd); } },
     shell: {
       exec: async (f, args = [], opts = {}) => {
@@ -93,6 +98,7 @@ function load(id, { editor = null, exec, settings = {}, globals = {}, monaco } =
     dispose() { for (const fn of did.disposers) fn(); },
     fn: null
   };
+  if (before) before(aether); // a test can make it look like another Aether (one without an API, say)
   const context = vm.createContext({ aether, console, setTimeout, clearTimeout, setInterval, clearInterval, ...globals });
   vm.runInContext('"use strict";\n' + fs.readFileSync(file, 'utf8'), context, { filename: file });
   ext.fn = context;

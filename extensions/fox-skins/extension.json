@@ -1,0 +1,15 @@
+{
+  "id": "fox-skins",
+  "name": "Fox Skins",
+  "version": "1.0.0",
+  "description": "Three more looks for Aether's fox: Cross fox, Shadow and Spirit.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "paw",
+  "tags": [
+    "pets",
+    "skins"
+  ],
+  "category": "Pets",
+  "aether": ">=1.9.27"
+}
