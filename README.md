@@ -50,6 +50,10 @@ They install in a moment, start at once, and update with one click when a new ve
 
 ## Share your own
 
+**The quick way:** open [Share your extension](https://redfire3248.github.io/aether-marketplace/publish.html), sign in with Google or an email, and pick your extension's folder. Add an icon (`icon.png`) and screenshots (`screenshots/*.png`) if you like. It goes in the Marketplace at once, marked as shared, and only you can change or remove it. It is saved in the site's Firestore database; [firestore.rules](firestore.rules) is what keeps each one its maker's.
+
+**Into this repository** (the Marketplace's own, checked before they go in):
+
 1. Make it in Aether: **Extensions > Yours > New extension**. The whole API is in [API.md](API.md) (also in Aether: **Help > How to Make an Aether Extension**).
 2. Fork this repository and copy your extension's folder into `extensions/<your-id>/`. It needs:
    - `extension.json` with `id` (the folder's name), `name`, `version` (like `1.0.0`), `description`, `author`, and optionally `icon` (an Aether icon name), `tags` and `style` (a CSS file);
