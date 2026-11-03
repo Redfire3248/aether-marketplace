@@ -4,7 +4,7 @@
     {
       "id": "cat-skins",
       "name": "Cat Skins",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Three more looks for Aether's cat: Siamese, Cinnamon and Russian blue.",
       "icon": "paw",
@@ -13,7 +13,7 @@
         "skins"
       ],
       "category": "Pets",
-      "aether": ">=1.9.27",
+      "aether": ">=1.9.28",
       "files": [
         "README.md",
         "extension.json",
@@ -46,7 +46,7 @@
     {
       "id": "dog-skins",
       "name": "Dog Skins",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Three more looks for Aether's dog: Dalmatian, Corgi and Silver grey.",
       "icon": "paw",
@@ -55,7 +55,7 @@
         "skins"
       ],
       "category": "Pets",
-      "aether": ">=1.9.27",
+      "aether": ">=1.9.28",
       "files": [
         "README.md",
         "extension.json",
@@ -86,7 +86,7 @@
     {
       "id": "fox-skins",
       "name": "Fox Skins",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "Three more looks for Aether's fox: Cross fox, Shadow and Spirit.",
       "icon": "paw",
@@ -95,7 +95,7 @@
         "skins"
       ],
       "category": "Pets",
-      "aether": ">=1.9.27",
+      "aether": ">=1.9.28",
       "files": [
         "README.md",
         "extension.json",
@@ -209,7 +209,7 @@
     {
       "id": "pet-pack-skins",
       "name": "Pet Pack Skins",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Redfire3248",
       "description": "More looks for the Pet Pack: a poison blue and a golden frog, an emperor and a pink penguin, a brown and a grey bunny.",
       "icon": "paw",
@@ -218,7 +218,7 @@
         "skins"
       ],
       "category": "Pets",
-      "aether": ">=1.9.27",
+      "aether": ">=1.9.28",
       "files": [
         "README.md",
         "extension.json",
