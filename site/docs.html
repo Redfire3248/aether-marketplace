@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aether Docs</title>
+  <meta name="description" content="How to use everything in Aether: the code editor, running and debugging, Aether Script, AI, the game engine, the studios, apps, Arduino, PDFs, pets, themes and extensions.">
+  <meta name="theme-color" content="#0b0e1a">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script src="themes.js"></script>
+  <script src="site.js" defer></script>
+  <script src="md.js" defer></script>
+  <script src="docs.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#doc">Skip to the guide</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="https://redfire3248.github.io/aether-download/"><img src="logo.png" alt="" width="28" height="28"><span>Aether</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="docs.html" aria-current="page">Docs</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="https://redfire3248.github.io/aether-download/#get">Get Aether</a>
+      </nav>
+      <div class="theme-pick">
+        <button class="theme-btn" id="theme-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" title="Change the theme">
+          <i class="theme-dot"></i><span>Theme</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="group" aria-label="Themes" hidden></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap docs">
+    <aside class="docs-side" aria-label="Guides">
+      <label class="search">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="dq" type="search" placeholder="Search the docs" aria-label="Search the docs" autocomplete="off">
+      </label>
+      <details class="docs-topics" id="topics" open>
+        <summary>Guides</summary>
+        <nav id="toc-nav"></nav>
+      </details>
+    </aside>
+    <main class="docs-main">
+      <div id="results" class="docs-results" hidden></div>
+      <article id="doc" class="md"><p class="muted">Loading…</p></article>
+      <nav class="docs-pager" id="pager" aria-label="Next and previous guide"></nav>
+    </main>
+    <aside class="docs-here" aria-label="On this page"><p class="docs-here-h">On this page</p><nav id="here"></nav></aside>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>Aether, <span id="year">2026</span>. MIT license.</span>
+      <nav aria-label="More">
+        <a href="marketplace.html">Marketplace</a>
+        <a href="https://github.com/Redfire3248/aether-marketplace">Make an extension</a>
+        <a href="https://redfire3248.github.io/aether-download/">Get Aether</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
