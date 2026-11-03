@@ -1,8 +1,8 @@
 {
   "id": "pet-pack",
   "name": "Pet Pack",
-  "version": "1.0.0",
-  "description": "Three more pets for Aether: a frog, a penguin and a bunny, each with three skins.",
+  "version": "2.0.0",
+  "description": "Three more pets for Aether: a frog, a penguin and a bunny. Their other looks are in Pet Pack Skins.",
   "author": "Redfire3248",
   "main": "main.js",
   "icon": "paw",

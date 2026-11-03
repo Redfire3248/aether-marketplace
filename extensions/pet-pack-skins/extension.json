@@ -1,0 +1,15 @@
+{
+  "id": "pet-pack-skins",
+  "name": "Pet Pack Skins",
+  "version": "1.0.0",
+  "description": "More looks for the Pet Pack: a poison blue and a golden frog, an emperor and a pink penguin, a brown and a grey bunny.",
+  "author": "Redfire3248",
+  "main": "main.js",
+  "icon": "paw",
+  "tags": [
+    "pets",
+    "skins"
+  ],
+  "category": "Pets",
+  "aether": ">=1.9.27"
+}
