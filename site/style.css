@@ -534,3 +534,15 @@ h1, h2, h3, .page-head h1, .ext-head h1 { font-family: var(--display); letter-sp
 .pub-signin h2, .pub-signin > p, #verify h2, #verify > p { text-align: center; }
 .pub-signin .row, #verify .row { justify-content: center; }
 .pub-signin .linkish { width: 100%; text-align: center; }
+
+/* "by Aether": the Marketplace's own, in a gradient that moves, with Trusted beside it */
+.by-aether { font-weight: 700; background: linear-gradient(90deg, #8f7dff, #3ff3c8, #ff7eb6, #8f7dff) 0 0 / 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: aether-flow 6s linear infinite; }
+@keyframes aether-flow { to { background-position: 300% 0; } }
+.trusted { display: inline-flex; align-items: center; gap: 4px; margin-left: 6px; padding: 1px 8px 1px 6px; border-radius: 99px; font-size: .82em; font-weight: 600; color: #3ff3c8; background: color-mix(in srgb, #3ff3c8 12%, transparent); border: 1px solid color-mix(in srgb, #3ff3c8 40%, transparent); vertical-align: 1px; }
+.trusted::before { content: ""; width: .8em; height: .8em; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5zm-1.2 14.2-3.9-3.9 1.4-1.4 2.5 2.5 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5zm-1.2 14.2-3.9-3.9 1.4-1.4 2.5 2.5 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E") center / contain no-repeat; }
+[data-theme="light"] .trusted { color: #0b7d63; background: color-mix(in srgb, #0b7d63 10%, transparent); border-color: color-mix(in srgb, #0b7d63 40%, transparent); }
+[data-theme="light"] .by-aether { background-image: linear-gradient(90deg, #5b45e0, #0b8f7a, #c2255c, #5b45e0); }
+.ext-by { margin: 0 0 4px; color: var(--muted); font-size: 15px; }
+[data-style="pixel"] .trusted { font-family: var(--sans); font-weight: 400; border-width: 2px; }
+[data-style="pixel"] .by-aether { animation-timing-function: steps(24, end); }
+@media (prefers-reduced-motion: reduce) { .by-aether { animation: none; } }

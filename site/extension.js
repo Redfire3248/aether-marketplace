@@ -2,7 +2,7 @@
 // name and details, how to install it, its screenshots (bigger when clicked), and its README, rendered from Markdown.
 (function () {
   'use strict';
-  const { icon, esc, loadIndex, size, REPO, community, badge } = self.AetherSite;
+  const { icon, esc, loadIndex, size, REPO, community, badge, maker } = self.AetherSite;
 
   // a theme's picture: Aether's window drawn in the theme's own colours
   const picture = (x) => {
@@ -73,6 +73,7 @@
         <span class="badge${x.picture || x.image ? ' pic' : ''}">${badge(x, base)}</span>
         <div>
           <h1>${esc(x.name)}</h1>
+          <p class="ext-by">by ${maker(x)}</p>
           <p class="ext-desc">${esc(x.description)}</p>
           <div class="tagrow"><a class="tag cat-tag" href="marketplace.html?cat=${encodeURIComponent(x.category || '')}">${esc(x.category || '')}</a>${x.community ? '<span class="tag shared-tag">Shared by a person</span>' : ''}${(x.tags || []).filter((t) => t.toLowerCase() !== String(x.category).toLowerCase()).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
         </div>
@@ -92,7 +93,7 @@
       <div class="side-card">
         <h2>Details</h2>
         <dl class="facts">
-          <dt>Made by</dt><dd>${esc(x.author)}</dd>
+          <dt>Made by</dt><dd>${maker(x)}</dd>
           <dt>Version</dt><dd>${esc(x.version)}</dd>
           ${x.size ? `<dt>Size</dt><dd>${size(x.size)}</dd>` : ''}
           ${x.aether ? `<dt>Needs</dt><dd>Aether ${esc(x.aether.replace('>=', ''))} or newer</dd>` : ''}

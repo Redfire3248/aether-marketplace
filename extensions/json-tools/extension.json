@@ -3,7 +3,7 @@
   "name": "JSON Tools",
   "version": "1.0.0",
   "description": "Format, minify or sort the keys of JSON (the selection or the whole file), and see where the error is when it is not valid.",
-  "author": "Redfire3248",
+  "author": "Aether",
   "main": "main.js",
   "icon": "braces",
   "tags": [

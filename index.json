@@ -5,7 +5,7 @@
       "id": "cat-skins",
       "name": "Cat Skins",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Three more looks for Aether's cat: Siamese, Cinnamon and Russian blue.",
       "icon": "paw",
       "tags": [
@@ -19,13 +19,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1435
+      "size": 1430
     },
     {
       "id": "colour-swatches",
       "name": "Colour Swatches",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "A small square of the colour before every colour in your code: #hex, rgb() and hsl(), in CSS, HTML, JS, JSON and more.",
       "icon": "palette",
       "tags": [
@@ -41,13 +41,13 @@
         "main.js",
         "style.css"
       ],
-      "size": 3743
+      "size": 3738
     },
     {
       "id": "dog-skins",
       "name": "Dog Skins",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Three more looks for Aether's dog: Dalmatian, Corgi and Silver grey.",
       "icon": "paw",
       "tags": [
@@ -61,13 +61,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1407
+      "size": 1402
     },
     {
       "id": "focus-timer",
       "name": "Focus Timer",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Focus in blocks with breaks between, from the status bar. It chimes at the end and counts your blocks for the day.",
       "icon": "clock",
       "tags": [
@@ -81,13 +81,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 5262
+      "size": 5257
     },
     {
       "id": "fox-skins",
       "name": "Fox Skins",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Three more looks for Aether's fox: Cross fox, Shadow and Spirit.",
       "icon": "paw",
       "tags": [
@@ -101,13 +101,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1395
+      "size": 1390
     },
     {
       "id": "git-line",
       "name": "Git Line",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "The status bar shows who last changed the cursor's line and when. Click it for the commit's message.",
       "icon": "git",
       "tags": [
@@ -121,13 +121,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 6999
+      "size": 6994
     },
     {
       "id": "html-quick",
       "name": "HTML Quick",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Type a short abbreviation like ul>li*3 or div.card>h2+p and press Ctrl+Alt+E to turn it into HTML.",
       "icon": "code",
       "tags": [
@@ -142,13 +142,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 12926
+      "size": 12921
     },
     {
       "id": "json-tools",
       "name": "JSON Tools",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Format, minify or sort the keys of JSON (the selection or the whole file), and see where the error is when it is not valid.",
       "icon": "braces",
       "tags": [
@@ -163,13 +163,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 9833
+      "size": 9828
     },
     {
       "id": "markdown-tables",
       "name": "Markdown Tables",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Line up the columns of the table the cursor is in, add a row or a column, and turn comma- or tab-separated text into a table.",
       "icon": "grid",
       "tags": [
@@ -184,13 +184,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 10051
+      "size": 10046
     },
     {
       "id": "pet-pack",
       "name": "Pet Pack",
       "version": "2.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Three more pets for Aether: a frog, a penguin and a bunny. Their other looks are in Pet Pack Skins.",
       "icon": "paw",
       "tags": [
@@ -204,13 +204,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 4803
+      "size": 4798
     },
     {
       "id": "pet-pack-skins",
       "name": "Pet Pack Skins",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "More looks for the Pet Pack: a poison blue and a golden frog, an emperor and a pink penguin, a brown and a grey bunny.",
       "icon": "paw",
       "tags": [
@@ -224,13 +224,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1982
+      "size": 1977
     },
     {
       "id": "quick-insert",
       "name": "Quick Insert",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Put placeholder text, today's date, the time, a unique id, a strong password or a random number at the cursor.",
       "icon": "plus",
       "tags": [
@@ -244,13 +244,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 3856
+      "size": 3851
     },
     {
       "id": "regex-lab",
       "name": "Regex Lab",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "A tab of its own to try a regular expression on some text: matches highlighted, groups listed, and a replace preview.",
       "icon": "search",
       "tags": [
@@ -266,13 +266,13 @@
         "main.js",
         "style.css"
       ],
-      "size": 12382
+      "size": 12377
     },
     {
       "id": "text-tools",
       "name": "Text Tools",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Change case (camelCase, snake_case, Title Case and more), and sort, clean up, number or join lines.",
       "icon": "type",
       "tags": [
@@ -286,13 +286,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 4866
+      "size": 4861
     },
     {
       "id": "theme-arctic-night",
       "name": "Arctic Night",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Cold and clear: midnight blue with icy light.",
       "icon": "palette",
       "tags": [
@@ -321,13 +321,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1914
+      "size": 1909
     },
     {
       "id": "theme-blood-moon",
       "name": "Blood Moon",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Dark and dramatic: black-red with a burning crimson.",
       "icon": "palette",
       "tags": [
@@ -356,13 +356,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1917
+      "size": 1912
     },
     {
       "id": "theme-cyber-noir",
       "name": "Cyber Noir",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Black and electric yellow, straight out of the future.",
       "icon": "palette",
       "tags": [
@@ -391,13 +391,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1921
+      "size": 1916
     },
     {
       "id": "theme-deep-sea",
       "name": "Deep Sea",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Dark and calm, deep blues with teal.",
       "icon": "palette",
       "tags": [
@@ -426,13 +426,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1899
+      "size": 1894
     },
     {
       "id": "theme-ember",
       "name": "Ember",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Dark and warm, browns with a glowing orange.",
       "icon": "palette",
       "tags": [
@@ -461,13 +461,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1896
+      "size": 1891
     },
     {
       "id": "theme-forest-night",
       "name": "Forest Night",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Dark and quiet, deep greens with mint.",
       "icon": "palette",
       "tags": [
@@ -496,13 +496,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1941
+      "size": 1936
     },
     {
       "id": "theme-glacier",
       "name": "Glacier",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Light and cool, crisp blues and greys.",
       "icon": "palette",
       "tags": [
@@ -531,13 +531,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1897
+      "size": 1892
     },
     {
       "id": "theme-lavender-mist",
       "name": "Lavender Mist",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Light and soft: pale purple with deep violet ink.",
       "icon": "palette",
       "tags": [
@@ -566,13 +566,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1936
+      "size": 1931
     },
     {
       "id": "theme-matcha",
       "name": "Matcha",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Calm and light: creamy green tea with deep leaf green.",
       "icon": "palette",
       "tags": [
@@ -601,13 +601,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1888
+      "size": 1883
     },
     {
       "id": "theme-mint-cream",
       "name": "Mint Cream",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Light and fresh, soft greens.",
       "icon": "palette",
       "tags": [
@@ -636,13 +636,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1897
+      "size": 1892
     },
     {
       "id": "theme-neon-tide",
       "name": "Neon Tide",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Dark and bright, glowing teal and pink.",
       "icon": "palette",
       "tags": [
@@ -671,13 +671,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1915
+      "size": 1910
     },
     {
       "id": "theme-pack-light",
       "name": "Light Theme Pack",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Five calm light themes in one: Glacier, Lavender Mist, Matcha, Mint Cream and Paper.",
       "icon": "palette",
       "tags": [
@@ -707,13 +707,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 5835
+      "size": 5830
     },
     {
       "id": "theme-pack-nature",
       "name": "Nature Theme Pack",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Five dark themes from the outdoors in one: Forest Night, Deep Sea, Arctic Night, Ember and Blood Moon.",
       "icon": "palette",
       "tags": [
@@ -743,13 +743,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 5909
+      "size": 5904
     },
     {
       "id": "theme-pack-neon",
       "name": "Neon Theme Pack",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Four bright night themes in one: Neon Tide, Cyber Noir, Tokyo Rain and Plum Dusk.",
       "icon": "palette",
       "tags": [
@@ -779,13 +779,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 4999
+      "size": 4994
     },
     {
       "id": "theme-pack-pixel",
       "name": "Pixel Theme Pack",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Six square-pixel themes in one: Amber, Cherry, Mint, Paper, Sunset and Vapor.",
       "icon": "palette",
       "tags": [
@@ -817,13 +817,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 6925
+      "size": 6920
     },
     {
       "id": "theme-paper",
       "name": "Paper",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Light and warm, like a page in a book.",
       "icon": "palette",
       "tags": [
@@ -852,13 +852,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1879
+      "size": 1874
     },
     {
       "id": "theme-pixel-amber",
       "name": "Pixel Amber",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "An old amber monitor: warm glowing orange on black.",
       "icon": "palette",
       "tags": [
@@ -888,13 +888,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1989
+      "size": 1984
     },
     {
       "id": "theme-pixel-cherry",
       "name": "Pixel Cherry",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Square pixels with a bite: dark red with cherry pink.",
       "icon": "palette",
       "tags": [
@@ -924,13 +924,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 2004
+      "size": 1999
     },
     {
       "id": "theme-pixel-mint",
       "name": "Pixel Mint",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Square pixels, cool and clean: deep teal with bright mint.",
       "icon": "palette",
       "tags": [
@@ -960,13 +960,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 2001
+      "size": 1996
     },
     {
       "id": "theme-pixel-paper",
       "name": "Pixel Paper",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Square pixels on a light page: cream with bold ink.",
       "icon": "palette",
       "tags": [
@@ -996,13 +996,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1991
+      "size": 1986
     },
     {
       "id": "theme-pixel-sunset",
       "name": "Pixel Sunset",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Square pixels at dusk: deep purple with orange and pink.",
       "icon": "palette",
       "tags": [
@@ -1032,13 +1032,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 2013
+      "size": 2008
     },
     {
       "id": "theme-pixel-vapor",
       "name": "Pixel Vapor",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Square pixels, loud and pink: hot pink and cyan on indigo.",
       "icon": "palette",
       "tags": [
@@ -1068,13 +1068,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 2010
+      "size": 2005
     },
     {
       "id": "theme-plum-dusk",
       "name": "Plum Dusk",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Dark and soft, deep purples with pink.",
       "icon": "palette",
       "tags": [
@@ -1103,13 +1103,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1912
+      "size": 1907
     },
     {
       "id": "theme-tokyo-rain",
       "name": "Tokyo Rain",
       "version": "1.0.1",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "City lights in the rain: deep indigo with neon signs.",
       "icon": "palette",
       "tags": [
@@ -1138,13 +1138,13 @@
         "extension.json",
         "main.js"
       ],
-      "size": 1918
+      "size": 1913
     },
     {
       "id": "word-count",
       "name": "Word Count",
       "version": "1.0.0",
-      "author": "Redfire3248",
+      "author": "Aether",
       "description": "Words and reading time in the status bar for Markdown and text files, and for whatever you select.",
       "icon": "book",
       "tags": [
@@ -1158,7 +1158,7 @@
         "extension.json",
         "main.js"
       ],
-      "size": 2980
+      "size": 2975
     }
   ]
 }

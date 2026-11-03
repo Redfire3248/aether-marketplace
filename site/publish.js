@@ -171,7 +171,22 @@ function drawShots() {
   $('shots-view').querySelectorAll('[data-x]').forEach((b) => (b.onclick = () => { F.shots.splice(+b.dataset.x, 1); drawShots(); }));
   $('shots-btn').disabled = F.shots.length >= 6;
 }
-function drawCode() { $('code-name').textContent = F.code ? `${F.codeName} · ${Math.ceil(F.code.length / 1024)} KB` : 'No file yet'; }
+function drawCode() { $('code-name').textContent = F.code ? `${F.codeName} · ${Math.ceil(F.code.length / 1024)} KB` : 'No file yet'; ready(); }
+// Share it can only be pressed once everything it needs is in; the line beside it says what is still missing
+const OURS = /^\s*aether\b/i; // the Marketplace's own extensions are "by Aether"
+function ready() {
+  const v = (k) => $(k).value.trim(), need = [];
+  if (!F.code) need.push('its main.js');
+  if (!v('f-name')) need.push('a name');
+  if (!ID.test(v('f-id'))) need.push('an id');
+  if (!v('f-desc')) need.push('what it does');
+  if (!/^\d+\.\d+\.\d+$/.test(v('f-ver'))) need.push('a version like 1.0.0');
+  if (!v('f-by') || OURS.test(v('f-by'))) need.push('who made it');
+  $('save').disabled = need.length > 0;
+  $('need').textContent = need.length ? 'Still needed: ' + need.join(', ') + '.' : '';
+  return !need.length;
+}
+form.addEventListener('input', ready);
 $('icon-btn').onclick = () => $('icon').click();
 $('icon-clear').onclick = () => { F.icon = ''; drawIcon(); };
 $('icon').onchange = async () => { const f = $('icon').files[0]; $('icon').value = ''; if (!f) return; try { F.icon = await shrink(f, 128, 128, MAX_ICON, true); drawIcon(); } catch (e) { say(e.message, 'error'); } };
@@ -218,7 +233,7 @@ form.onsubmit = async (ev) => {
   const v = (k) => $(k).value.trim();
   const x = { id: v('f-id'), name: v('f-name'), description: v('f-desc'), category: $('f-cat').value, version: v('f-ver'), author: v('f-by'), tags: v('f-tags').split(',').map((t) => t.trim().toLowerCase().slice(0, 20)).filter(Boolean).slice(0, 8) };
   const wrong = !x.name ? ['f-name', 'Give it a name.'] : !ID.test(x.id) ? ['f-id', 'The id is 3 to 40 small letters, numbers and dashes, starting with a letter or number.'] : !x.description ? ['f-desc', 'Say in one line what it does.']
-    : !/^\d+\.\d+\.\d+$/.test(x.version) ? ['f-ver', 'The version is like 1.0.0.'] : !x.author ? ['f-by', 'Say who made it.'] : !F.code ? ['code-btn', 'Pick its main.js.'] : null;
+    : !/^\d+\.\d+\.\d+$/.test(x.version) ? ['f-ver', 'The version is like 1.0.0.'] : !x.author ? ['f-by', 'Say who made it.'] : OURS.test(x.author) ? ['f-by', 'Aether is the name of the Marketplace\'s own extensions: use your own name.'] : !F.code ? ['code-btn', 'Pick its main.js.'] : null;
   if (wrong) { say(wrong[1], 'error'); $(wrong[0]).focus(); return; }
   try { new Function(F.code); } catch (e) { say('main.js has a mistake: ' + e.message, 'error'); return; }
   if (/\beval\s*\(|new Function\s*\(|require\s*\(\s*['"]child_process/.test(F.code)) { say('main.js may not use eval, new Function or child_process: use aether.shell.exec to run programs.', 'error'); return; }
@@ -244,5 +259,5 @@ form.onsubmit = async (ev) => {
     say(`${F.editing ? 'Changed' : 'Shared'} ${x.name}. It is in the Marketplace now.`);
     loadMine();
   } catch (e) { say(e.code === 'taken' ? e.message : plain(e), 'error'); }
-  busy(save, false, 'Share it');
+  busy(save, false, 'Share it'); ready();
 };

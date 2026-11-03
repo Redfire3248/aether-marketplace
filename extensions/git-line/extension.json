@@ -3,7 +3,7 @@
   "name": "Git Line",
   "version": "1.0.0",
   "description": "The status bar shows who last changed the cursor's line and when. Click it for the commit's message.",
-  "author": "Redfire3248",
+  "author": "Aether",
   "main": "main.js",
   "icon": "git",
   "tags": [

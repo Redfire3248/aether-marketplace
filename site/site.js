@@ -100,5 +100,7 @@
   // an extension's icon: its own picture when it has one, else one of Aether's icons
   const badge = (x, base = '') => (x.picture ? `<img src="${esc(x.picture)}" alt="" width="64" height="64">` : x.image ? `<img src="${esc(base + 'extensions/' + x.id + '/' + x.image)}" alt="" width="64" height="64">` : icon(x.icon));
 
-  root.AetherSite = { REPO, icon, esc, loadIndex, size, community, badge };
+  const maker = (x) => (!x.community && x.author === 'Aether' ? '<span class="by-aether">Aether</span><span class="trusted" title="Made by the Aether team and checked">Trusted</span>' : esc(x.author));
+
+  root.AetherSite = { REPO, icon, esc, loadIndex, size, community, badge, maker };
 })(self);

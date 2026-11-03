@@ -3,7 +3,7 @@
   "name": "HTML Quick",
   "version": "1.0.0",
   "description": "Type a short abbreviation like ul>li*3 or div.card>h2+p and press Ctrl+Alt+E to turn it into HTML.",
-  "author": "Redfire3248",
+  "author": "Aether",
   "main": "main.js",
   "icon": "code",
   "tags": [

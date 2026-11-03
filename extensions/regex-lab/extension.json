@@ -3,7 +3,7 @@
   "name": "Regex Lab",
   "version": "1.0.0",
   "description": "A tab of its own to try a regular expression on some text: matches highlighted, groups listed, and a replace preview.",
-  "author": "Redfire3248",
+  "author": "Aether",
   "main": "main.js",
   "icon": "search",
   "tags": [

@@ -3,7 +3,7 @@
   "name": "Colour Swatches",
   "version": "1.0.0",
   "description": "A small square of the colour before every colour in your code: #hex, rgb() and hsl(), in CSS, HTML, JS, JSON and more.",
-  "author": "Redfire3248",
+  "author": "Aether",
   "main": "main.js",
   "icon": "palette",
   "tags": [

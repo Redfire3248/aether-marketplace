@@ -2,7 +2,7 @@
 // filtered list can be shared).
 (function () {
   'use strict';
-  const { esc, loadIndex, community, badge } = self.AetherSite;
+  const { esc, loadIndex, community, badge, maker } = self.AetherSite;
   const $ = (id) => document.getElementById(id);
 
   document.addEventListener('DOMContentLoaded', async () => {
@@ -48,7 +48,7 @@
         <a class="card ext theme-card${(x.tags || []).includes('pixel') ? ' pixel' : ''}${(x.tags || []).includes('light') ? ' light' : ''}" style="${v};--i:${i}" href="${link(x)}">
           <h3>${esc(x.name)}</h3>
           <p>${esc(x.description)}</p>
-          <div class="t-foot"><span class="t-btn">${(x.tags || []).includes('pixel') ? 'Pixel' : (x.tags || []).includes('light') ? 'Light' : 'Dark'}</span><span class="by">v${esc(x.version)}</span></div>
+          <div class="t-foot"><span class="t-btn">${(x.tags || []).includes('pack') ? 'Pack' : (x.tags || []).includes('pixel') ? 'Pixel' : (x.tags || []).includes('light') ? 'Light' : 'Dark'}</span><span class="by">${x.community ? esc(x.author) + ' · ' : ''}v${esc(x.version)}</span></div>
         </a>`;
     }
     function draw() {
@@ -59,7 +59,7 @@
         <a class="card ext${x.community ? ' shared' : ''}" style="--i:${i}" href="${link(x)}">
           <div class="head">
             <span class="badge${x.picture || x.image ? ' pic' : ''}">${badge(x, base)}</span>
-            <div><h3>${esc(x.name)}</h3><div class="by">${esc(x.author)} · v${esc(x.version)}${x.community ? ' · <span class="shared-tag">Shared</span>' : ''}</div></div>
+            <div><h3>${esc(x.name)}</h3><div class="by">${maker(x)} · v${esc(x.version)}${x.community ? ' · <span class="shared-tag">Shared</span>' : ''}</div></div>
           </div>
           <p>${esc(x.description)}</p>
           <div class="tagrow">${(x.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>

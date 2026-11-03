@@ -3,7 +3,7 @@
   "name": "Word Count",
   "version": "1.0.0",
   "description": "Words and reading time in the status bar for Markdown and text files, and for whatever you select.",
-  "author": "Redfire3248",
+  "author": "Aether",
   "main": "main.js",
   "icon": "book",
   "tags": [
